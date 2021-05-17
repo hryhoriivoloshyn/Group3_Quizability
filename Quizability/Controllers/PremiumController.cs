@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Quizability.Controllers
 {
-    public class HomeController : Controller
+    public class PremiumController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public PremiumController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-        //hi
-        public IActionResult Index()
+
+        public IActionResult PremiumIndex()
         {
             return View();
         }

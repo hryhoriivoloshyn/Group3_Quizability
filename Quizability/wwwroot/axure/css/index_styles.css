@@ -223,8 +223,8 @@
   border-width:0px;
   white-space:nowrap;
   text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
-  -webkit-text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
-  -moz-text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
+  /*-webkit-text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
+  -moz-text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);*/
   text-transform:none;
 }
 #u6_div {
@@ -533,9 +533,9 @@
   top:0px;
   width:1440px;
   height:67px;
-  -ms-overflow-x:hidden;
+  /*-ms-overflow-x:hidden;*/
   overflow-x:hidden;
-  -ms-overflow-y:hidden;
+  /*-ms-overflow-y:hidden;*/
   overflow-y:hidden;
   background-image:none;
   border:none;
@@ -656,9 +656,9 @@
   top:0px;
   width:299px;
   height:35px;
-  -ms-overflow-x:hidden;
+  /*-ms-overflow-x:hidden;*/
   overflow-x:hidden;
-  -ms-overflow-y:hidden;
+  /*-ms-overflow-y:hidden;*/
   overflow-y:hidden;
   background-image:none;
   border:none;
@@ -765,9 +765,9 @@
   top:0px;
   width:299px;
   height:35px;
-  -ms-overflow-x:hidden;
+  /*-ms-overflow-x:hidden;*/
   overflow-x:hidden;
-  -ms-overflow-y:hidden;
+  /*-ms-overflow-y:hidden;*/
   overflow-y:hidden;
   background-image:none;
   border:none;
@@ -1090,9 +1090,9 @@
   top:0px;
   width:1440px;
   height:67px;
-  -ms-overflow-x:hidden;
+  /*-ms-overflow-x:hidden;*/
   overflow-x:hidden;
-  -ms-overflow-y:hidden;
+  /*-ms-overflow-y:hidden;*/
   overflow-y:hidden;
   background-image:none;
   border:none;
