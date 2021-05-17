@@ -73,3 +73,17 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*
+    Footer style
+*/
+footer {
+    background-color: rgba(41, 59, 186, 1);
+}
+    footer p {
+        font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
