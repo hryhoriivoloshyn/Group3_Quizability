@@ -17,7 +17,7 @@ namespace Quizability.Controllers
         {
             _logger = logger;
         }
-
+        //hi
         public IActionResult Index()
         {
             return View();
