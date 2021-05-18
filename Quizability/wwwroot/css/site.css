@@ -363,9 +363,9 @@ body {
 }
 #u1246 {
     border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    left: -65%;
+    top: -60%;
     width: 0px;
     height: 0px;
 }
@@ -568,9 +568,9 @@ body {
 }
 #u1251 {
     border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    left: -60%;
+    top: -60%;  
     width: 0px;
     height: 0px;
 }
@@ -845,9 +845,9 @@ body {
 
 #u1245 {
     border-width: 0px;
-    position: absolute;
-    left: 452px;
-    top: 638px;
+    position: relative;
+    left: 7%;
+    top: 57%;
     width: 536px;
     height: 48px;
     display: flex;
