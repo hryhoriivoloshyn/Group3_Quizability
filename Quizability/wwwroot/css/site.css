@@ -78,6 +78,9 @@ body {
 
 
 /*For Page Premium.cshtml*/
+#premium{
+    height: 760px;
+} 
 #u1238 {
     border-width: 0px;
     position: absolute;
@@ -88,8 +91,8 @@ body {
 }
 
 #u1239_div {
+    margin-top: 30px;
     border-width: 0px;
-    position: absolute;
     left: 0px;
     top: 0px;
     width: 666px;
@@ -138,9 +141,10 @@ body {
 }
 #u1257 {
     border-width: 0px;
-    position: absolute;
-    left: 588px;
-    top: 185px;
+    position: relative;
+    left: 30%;
+    top: 10px;
+   
     width: 257px;
     height: 46px;
     display: flex;
@@ -184,9 +188,9 @@ body {
 
 #u1240 {
     border-width: 0px;
-    position: absolute;
-    left: 434px;
-    top: 241px;
+    position: relative;
+    left: 15%;
+    top: 10%;
     width: 584px;
     height: 120px;
     display: flex;
@@ -910,12 +914,23 @@ body {
 /*
     Footer style
 */
-footer {
+#footer {
     background-color: rgba(41, 59, 186, 1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
 }
-    footer p {
+#footer p {
         font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
         font-size: 18px;
         font-weight: 700;
     }
+    #footer .p-3 {
+        padding: 11px !important;
+    }
+    #footer .p-4 {
+        padding: 13px !important;
+    }
+
 
