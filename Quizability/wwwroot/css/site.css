@@ -934,3 +934,1019 @@ body {
     }
 
 
+
+    /*FOR REGISTRATION*/
+
+#u489_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 187px;
+    height: 48px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    color: #293BBA;
+}
+
+#u489 {
+    border-width: 0px;
+    position: absolute;
+    left: 627px;
+    top: 95px;
+    width: 187px;
+    height: 48px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    color: #293BBA;
+}
+
+    #u489 .text {
+        position: absolute;
+        align-self: flex-start;
+        padding: 0px 0px 0px 0px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u489_text {
+    border-width: 0px;
+    white-space: nowrap;
+    text-transform: none;
+}
+#u425_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 357px;
+    height: 454px;
+    background: inherit;
+    background-color: rgba(41, 59, 186, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(41, 59, 186, 1);
+    border-radius: 15px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u425 {
+    border-width: 0px;
+    position: absolute;
+    left: 542px;
+    top: 156px;
+    width: 357px;
+    height: 454px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+    #u425 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u425_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+#u426_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 26px;
+    height: 32px;
+}
+
+#u426 {
+    border-width: 0px;
+    position: absolute;
+    left: 585px;
+    top: 215px;
+    width: 26px;
+    height: 32px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+    #u426 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u426_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+#u427_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 26px;
+    height: 32px;
+}
+
+#u427 {
+    border-width: 0px;
+    position: absolute;
+    left: 585px;
+    top: 360px;
+    width: 26px;
+    height: 32px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u427 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u427_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+#u428_input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #FFFFFF;
+    vertical-align: none;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    #u428_input.disabled {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 230px;
+        height: 25px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: normal;
+        color: #FFFFFF;
+        vertical-align: none;
+        text-align: left;
+        text-transform: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+#u428_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u428 {
+    border-width: 0px;
+    position: absolute;
+    left: 630px;
+    top: 291px;
+    width: 230px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u428 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u428_div.disabled {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(240, 240, 240, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u428.disabled {
+}
+
+#u429_input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #FFFFFF;
+    vertical-align: none;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    #u429_input.disabled {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 230px;
+        height: 25px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: normal;
+        color: #FFFFFF;
+        vertical-align: none;
+        text-align: left;
+        text-transform: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+#u429_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u429 {
+    border-width: 0px;
+    position: absolute;
+    left: 630px;
+    top: 222px;
+    width: 230px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u429 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u429_div.disabled {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(240, 240, 240, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u429.disabled {
+}
+
+#u430_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 27px;
+    height: 24px;
+}
+
+#u430 {
+    border-width: 0px;
+    position: absolute;
+    left: 585px;
+    top: 291px;
+    width: 27px;
+    height: 24px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+    #u430 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u430_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+#u431_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 27px;
+    height: 30px;
+}
+
+#u431 {
+    border-width: 0px;
+    position: absolute;
+    left: 586px;
+    top: 430px;
+    width: 27px;
+    height: 30px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u431 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u431_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+#u432_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 118px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#u432 {
+    border-width: 0px;
+    position: absolute;
+    left: 638px;
+    top: 557px;
+    width: 118px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+    #u432 .text {
+        position: absolute;
+        align-self: flex-start;
+        padding: 0px 0px 0px 0px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u432_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+}
+
+#u433_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 51px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #69D87A;
+}
+
+#u433 {
+    border-width: 0px;
+    position: absolute;
+    left: 757px;
+    top: 557px;
+    width: 51px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #69D87A;
+}
+
+    #u433 .text {
+        position: absolute;
+        align-self: flex-start;
+        padding: 0px 0px 0px 0px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u433_text {
+    border-width: 0px;
+    white-space: nowrap;
+    text-transform: none;
+}
+
+#u434_input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #FFFFFF;
+    vertical-align: none;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    #u434_input.disabled {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 230px;
+        height: 25px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: normal;
+        color: #FFFFFF;
+        vertical-align: none;
+        text-align: left;
+        text-transform: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+#u434_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u434 {
+    border-width: 0px;
+    position: absolute;
+    left: 630px;
+    top: 367px;
+    width: 230px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u434 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u434_div.disabled {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(240, 240, 240, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u434.disabled {
+}
+
+#u435_input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #FFFFFF;
+    vertical-align: none;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    #u435_input.disabled {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 230px;
+        height: 25px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: normal;
+        color: #FFFFFF;
+        vertical-align: none;
+        text-align: left;
+        text-transform: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+#u435_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u435 {
+    border-width: 0px;
+    position: absolute;
+    left: 630px;
+    top: 435px;
+    width: 230px;
+    height: 25px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+    #u435 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u435_div.disabled {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 230px;
+    height: 25px;
+    background: inherit;
+    background-color: rgba(240, 240, 240, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#u435.disabled {
+}
+
+#u436 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u437_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:246px;
+  height:27px;
+  background:inherit;
+  background-color:rgba(2, 167, 240, 1);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight:700;
+  font-style:normal;
+  color:#FFFFFF;
+  text-align:center;
+}
+#u437 {
+  border-width:0px;
+  position:absolute;
+  left:603px;
+  top:513px;
+  width:246px;
+  height:27px;
+  display:flex;
+  font-family:'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight:700;
+  font-style:normal;
+  color:#FFFFFF;
+  text-align:center;
+}
+#u437 .text {
+  position:absolute;
+  align-self:center;
+  padding:0px 0px 0px 0px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u437_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+}
+#u438_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:35px;
+  height:28px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 1);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight:400;
+  font-style:normal;
+}
+#u438 {
+  border-width:0px;
+  position:absolute;
+  left:603px;
+  top:512px;
+  width:35px;
+  height:28px;
+  display:flex;
+  font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight:400;
+  font-style:normal;
+}
+#u438 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u438_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
+}
+#u439_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:26px;
+  height:27px;
+}
+#u439 {
+  border-width:0px;
+  position:absolute;
+  left:608px;
+  top:513px;
+  width:26px;
+  height:27px;
+  display:flex;
+  font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight:400;
+  font-style:normal;
+}
+#u439 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u439_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
+}
+
+#u453_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 216px;
+    height: 67px;
+    background: inherit;
+    background-color: rgba(105, 216, 122, 1);
+    border: none;
+    border-radius: 25px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#u453 {
+    border-width: 0px;
+    position: absolute;
+    left: 612px;
+    top: 642px;
+    width: 216px;
+    height: 67px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+    #u453 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+#u453_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+}
