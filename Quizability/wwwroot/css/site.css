@@ -11,6 +11,11 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+/*Styles for main*/
+#mainc {
+    height: 100px;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -916,7 +921,7 @@ body {
 */
 #footer {
     background-color: rgba(41, 59, 186, 1);
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: fit-content;
