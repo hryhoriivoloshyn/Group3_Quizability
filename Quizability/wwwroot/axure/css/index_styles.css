@@ -1,9 +1,9 @@
 ﻿body {
-  margin:0px;
-  background-image:none;
-  position:relative;
-  left:0px;
-  text-align:left;
+    margin: 0px;
+    background-image: none;
+    left: 0px;
+    text-align: left;
+    max-width:1485px;
 }
 .form_sketch {
   border-color:transparent;
@@ -14,12 +14,10 @@
   z-index:0;
 }
 #u0_img {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:1440px;
-  height:736px;
+    position: absolute;
+    width: 100%;
+    max-height: 700px;
+    min-width: 1481px;
 }
 #u0 {
   border-width:0px;
@@ -199,25 +197,22 @@
   color:#FFFFFF;
 }
 #u5 {
-  border-width:0px;
-  position:absolute;
-  left:110px;
-  top:300px;
-  width:645px;
-  height:134px;
-  display:flex;
-  font-family:'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-  font-weight:700;
-  font-style:normal;
-  font-size:50px;
-  color:#FFFFFF;
+    margin-top: 230px;
+    margin-left: 13px;
+    width: 645px;
+    height: 134px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    color: #FFFFFF;
 }
 #u5 .text {
   position:absolute;
   align-self:flex-start;
   padding:0px 0px 0px 0px;
   box-sizing:border-box;
-  width:100%;
 }
 #u5_text {
   border-width:0px;
@@ -247,17 +242,17 @@
   font-size:18px;
 }
 #u6 {
-  border-width:0px;
-  position:absolute;
-  left:106px;
-  top:442px;
-  width:225px;
-  height:77px;
-  display:flex;
-  font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
-  font-weight:400;
-  font-style:normal;
-  font-size:18px;
+    border-width: 0px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 225px;
+    height: 77px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
 }
 #u6 .text {
   position:absolute;
@@ -279,7 +274,7 @@
   width:304px;
   height:48px;
   background:inherit;
-  background-color:rgba(255, 255, 255, 1);
+  background-color:rgba(240, 240, 240, 1);
   border:none;
   border-radius:12px;
   -moz-box-shadow:none;
@@ -293,19 +288,20 @@
   text-align:center;
 }
 #u7 {
-  border-width:0px;
-  position:absolute;
-  left:581px;
-  top:818px;
-  width:304px;
-  height:48px;
-  display:flex;
-  font-family:'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-  font-weight:700;
-  font-style:normal;
-  font-size:24px;
-  color:#69D87A;
-  text-align:center;
+    border-width: 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    width: 304px;
+    height: 48px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #69D87A;
+    text-align: center;
 }
 #u7 .text {
   position:absolute;
@@ -315,9 +311,10 @@
   width:100%;
 }
 #u7_text {
-  border-width:0px;
-  word-wrap:break-word;
-  text-transform:none;
+    margin-top: 5px;
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
 }
 #u8_div {
   border-width:0px;
@@ -338,21 +335,23 @@
   font-style:normal;
 }
 #u8 {
-  border-width:0px;
-  position:absolute;
-  left:457px;
-  top:903px;
-  width:526px;
-  height:366px;
-  display:flex;
-  font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
-  font-weight:400;
-  font-style:normal;
+    border-width: 0px;
+    position: relative;
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    width: 526px;
+    height: 366px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 #u8 .text {
   position:absolute;
   align-self:center;
-  padding:2px 2px 2px 2px;
+  padding: 2px 35px 2px 35px;
   box-sizing:border-box;
   width:100%;
 }
@@ -439,9 +438,17 @@
   width:100%;
 }
 #u10_text {
-  border-width:0px;
-  word-wrap:break-word;
-  text-transform:none;
+  border-width: 0px;
+  word-wrap: break-word;
+  text-transform: none;
+  margin-top: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  text-align: justify;
 }
 #u11_div {
   border-width:0px;
@@ -463,17 +470,18 @@
   color:#000000;
 }
 #u11 {
-  border-width:0px;
-  position:absolute;
-  left:610px;
-  top:1086px;
-  width:220px;
-  height:26px;
-  display:flex;
-  font-family:'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-  font-weight:700;
-  font-style:normal;
-  color:#000000;
+    border-width: 0px;
+    position: relative;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    height: 26px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
 }
 #u11 .text {
   position:absolute;

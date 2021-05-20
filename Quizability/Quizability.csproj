@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Home\Images\" />
+    <None Include="wwwroot\images\backgroundTopImage.png" />
     <Folder Include="Views\Forget\" />
   </ItemGroup>
 
