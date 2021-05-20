@@ -919,7 +919,6 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: fit-content;
 }
 #footer p {
         font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
@@ -1124,7 +1123,6 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
@@ -1144,7 +1142,6 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
@@ -1539,7 +1536,6 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
@@ -1559,7 +1555,6 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
@@ -1660,7 +1655,6 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
@@ -1680,7 +1674,6 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
@@ -2013,7 +2006,6 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
@@ -2033,7 +2025,6 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
@@ -2134,7 +2125,6 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
@@ -2154,7 +2144,6 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
@@ -2604,7 +2593,7 @@ body {
         padding: 2px 2px 2px 2px;
         box-sizing: border-box;
         width: 100%;
- }
+
 
 #u589_text {
     border-width: 0px;
