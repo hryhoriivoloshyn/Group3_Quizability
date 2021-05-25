@@ -1045,8 +1045,8 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 26px;
-    height: 32px;
+    width: 30px;
+    height: 28px;
 }
 
 #u426 {
@@ -1780,7 +1780,7 @@ body {
   left:0px;
   top:0px;
   width:246px;
-  height:27px;
+  height:29px;
   background:inherit;
   background-color:rgba(2, 167, 240, 1);
   border:none;
@@ -1844,7 +1844,7 @@ body {
   left:603px;
   top:512px;
   width:35px;
-  height:28px;
+  height:26px;
   display:flex;
   font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
   font-weight:400;
@@ -2425,7 +2425,7 @@ body {
     left: 603px;
     top: 480px;
     width: 246px;
-    height: 27px;
+    height: 28px;
     display: flex;
     font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 700;
@@ -2592,14 +2592,13 @@ body {
     color: #FFFFFF;
 }
 
-#u589 .text {
+    #u589 .text {
         position: absolute;
         align-self: center;
         padding: 2px 2px 2px 2px;
         box-sizing: border-box;
         width: 100%;
-
-
+    }
 #u589_text {
     border-width: 0px;
     word-wrap: break-word;
@@ -2695,13 +2694,13 @@ body {
     color: #FFFFFF;
 }
 
-    #u740 .text {
+#u740 .text {
         position: absolute;
         align-self: center;
         padding: 2px 2px 2px 2px;
         box-sizing: border-box;
         width: 100%;
-    }
+}
 
 #u740_text {
     border-width: 0px;
@@ -2739,14 +2738,13 @@ body {
     font-size: 13px;
     letter-spacing: normal;
     color: #FFFFFF;
-    vertical-align: none;
     text-align: left;
     text-transform: none;
     background-color: transparent;
     border-color: transparent;
 }
 
-    #u780_input.disabled {
+#u780_input.disabled {
         position: absolute;
         left: 0px;
         top: 0px;
@@ -2759,12 +2757,11 @@ body {
         font-size: 13px;
         letter-spacing: normal;
         color: #FFFFFF;
-        vertical-align: none;
         text-align: left;
         text-transform: none;
         background-color: transparent;
         border-color: transparent;
-    }
+}
 
 #u780_div {
     border-width: 0px;
@@ -2978,4 +2975,16 @@ body {
     border-width: 0px;
     white-space: nowrap;
     text-transform: none;
+}
+
+/*buttons*/
+#but_form {
+    background: transparent;
+}
+button:active, button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
