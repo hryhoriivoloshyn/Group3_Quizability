@@ -13,7 +13,6 @@
   z-index:0;
 }
 #u0_img {
-    position: absolute;
     width: 100%;
     max-height: 700px;
     min-width: 1481px;
@@ -23,7 +22,6 @@
   position:absolute;
   left:0px;
   top:67px;
-  width:1440px;
   height:736px;
   display:flex;
   font-family:'Segoe UI Обычный', 'Segoe UI', sans-serif;
