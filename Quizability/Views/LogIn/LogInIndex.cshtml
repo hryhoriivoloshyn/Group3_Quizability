@@ -1,7 +1,5 @@
-﻿@*
-	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+	ViewData["Title"] = "Log In Page";
 }
 <!--main-->
 <div id="u588" class="ax_default box_1">
@@ -11,25 +9,27 @@
 	</div>
 </div>
 
-<!-- +Email (Text Field) -->
-<div id="u629" class="ax_default text_field" data-label="+Email">
-	<div id="u629_div" class=""></div>
-	<input id="u629_input" type="email" value="" placeholder="Логін" class="u629_input" />
-</div>
-
-<!-- +Password1 (Text Field) -->
-<div id="u630" class="ax_default text_field" data-label="+Password1">
-	<div id="u630_div" class=""></div>
-	<input id="u630_input" type="password" value="" placeholder="Пароль" class="u630_input" />
-</div>
-
-<!--checkbox-->
-<div id="u627" class="ax_default checkbox">
-	<div id="u627_input_label" for="u627_input" style="position: absolute; left: 0px;">
-		<input type="checkbox" name="remember" value="a2"> Запам'ятати мене
+<form>
+	<!-- +Email (Text Field) -->
+	<div id="u629" class="ax_default text_field" data-label="+Email">
+		<div id="u629_div" class=""></div>
+		<input id="u629_input" type="email" value="" placeholder="Логін" class="u629_input" />
 	</div>
-	<input id="u627_input" type="checkbox" value="checkbox" />
-</div>
+
+	<!-- +Password1 (Text Field) -->
+	<div id="u630" class="ax_default text_field" data-label="+Password1">
+		<div id="u630_div" class=""></div>
+		<input id="u630_input" type="password" value="" placeholder="Пароль" class="u630_input" />
+	</div>
+
+	<!--checkbox-->
+	<div id="u627" class="ax_default checkbox">
+		<div id="u627_input_label" for="u627_input" style="position: absolute; left: 0px;">
+			<input type="checkbox" name="remember" value="a2"> Запам'ятати мене
+		</div>
+		<input id="u627_input" type="checkbox" value="checkbox" />
+	</div>
+</form>
 
 <!-- forget -->
 <div id="u628" class="ax_default label">
@@ -40,22 +40,22 @@
 </div>
 
 <!-- login exs -->
-<div id="u590" class="ax_default button">
+<button id="u590" class="ax_default button">
 	<div id="u590_div" class=""></div>
 	<div id="u590_text" class="text ">
 		<p><span>Увійти</span></p>
 	</div>
-</div>
+</button>
 
 <div id="u436" class="ax_default">
 
 	<!-- Unnamed (Rectangle) -->
-	<div id="u437a" class="ax_default heading_3">
+	<button id="u437a" class="ax_default heading_3">
 		<div id="u437a_div" class=""></div>
 		<div id="u437a_text" class="text ">
 			<p><span>Вхід через Google</span></p>
 		</div>
-	</div>
+	</button>
 
 	<!-- Unnamed (Rectangle) -->
 	<div id="u438a" class="ax_default box_1">
@@ -67,7 +67,7 @@
 
 	<!-- Unnamed (Image) -->
 	<div id="u439a" class="ax_default image">
-		<img id="u439a_img" class="img " src="" />	<!--ВСТАВИТЬ ФОТО гугл -->
+		<img id="u439a_img" class="img " src="~/images/google.png" />	<!--ВСТАВИТЬ ФОТО гугл -->
 		<div id="u439a_text" class="text " style="display:none; visibility: hidden">
 			<p></p>
 		</div>
@@ -76,7 +76,7 @@
 
 <!-- Unnamed (Shape) -->
 <div id="u591" class="ax_default icon">
-	<img id="u591_img" class="img " src="" />  <!--ВСТАВИТЬ ФОТО логин -->
+	<img id="u591_img" class="img " src="~/images/login.png" />  <!--ВСТАВИТЬ ФОТО логин -->
 	<div id="u591_text" class="text " style="display:none; visibility: hidden">
 		<p></p>
 	</div>
@@ -84,7 +84,7 @@
 
 <!-- Unnamed (Shape) -->
 <div id="u589" class="ax_default icon">
-	<img id="u589_img" class="img " src="" /> <!--ВСТАВИТЬ ФОТО пароль -->
+	<img id="u589_img" class="img " src="~/images/password1.png" /> <!--ВСТАВИТЬ ФОТО пароль -->
 	<div id="u589_text" class="text " style="display:none; visibility: hidden">
 		<p></p>
 	</div>
