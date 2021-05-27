@@ -1,0 +1,104 @@
+﻿@model Quizability.ViewModels.LoginModel
+
+@{
+    ViewData["Title"] = "Log In Page";
+}
+<!--main-->
+<div id="u588" class="ax_default box_1">
+    <div id="u588_div" class=""></div>
+    <div id="u588_text" class="text " style="display:none; visibility: hidden">
+        <p></p>
+    </div>
+</div>
+
+<form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+    <!--Вывод ошибок-->
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+
+    <!-- +Email (Text Field) -->
+    <div class="form-group">
+        <div id="u629" class="ax_default text_field" data-label="+Email">
+            <div id="u629_div" class=""></div>
+            <input id="u629_input" type="email" asp-for="Email" value="" placeholder="Логін" class="u629_input" />
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <!-- +Password1 (Text Field) -->
+    <div class="form-group">
+        <div id="u630" class="ax_default text_field" data-label="+Password1">
+            <div id="u630_div" class=""></div>
+            <input id="u630_input" type="password" asp-for="Password" value="" placeholder="Пароль" class="u630_input" />
+            <span asp-validation-for="Password"></span>
+        </div>
+    </div>
+    <!--checkbox-->
+    <div id="u627" class="ax_default checkbox">
+        <div id="u627_input_label" for="u627_input" style="position: absolute; left: 0px;">
+            <input type="checkbox" name="remember" value="a2"> Запам'ятати мене
+        </div>
+        <input id="u627_input" type="checkbox" value="checkbox" />
+    </div>
+
+    <!-- login exs -->
+    <div class="form-group">
+        <button id="u590" class="ax_default button">
+            <div id="u590_div" class=""></div>
+            <div id="u590_text" class="text ">
+                <input type="submit" value="Войти" class="btn btn-outline-dark" />
+            </div>
+        </button>
+    </div>
+</form>
+
+<!-- forget -->
+<div id="u628" class="ax_default label">
+    <div id="u628_div" class=""></div>
+    <div id="u628_text" class="text ">
+        <p><span><a href="../Forget/ForgetIndex">Забули пароль?</a></span></p>
+    </div>
+</div>
+
+
+
+    <div id="u436" class="ax_default">
+
+        <!-- Unnamed (Rectangle) -->
+        <button id="u437a" class="ax_default heading_3">
+            <div id="u437a_div" class=""></div>
+            <div id="u437a_text" class="text ">
+                <p><span>Вхід через Google</span></p>
+            </div>
+        </button>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u438a" class="ax_default box_1">
+            <div id="u438a_div" class=""></div>
+            <div id="u438a_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u439a" class="ax_default image">
+            <img id="u439a_img" class="img " src="~/images/google.png" />	<!--ВСТАВИТЬ ФОТО гугл -->
+            <div id="u439a_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u591" class="ax_default icon">
+        <img id="u591_img" class="img " src="~/images/login.png" />  <!--ВСТАВИТЬ ФОТО логин -->
+        <div id="u591_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u589" class="ax_default icon">
+        <img id="u589_img" class="img " src="~/images/password1.png" /> <!--ВСТАВИТЬ ФОТО пароль -->
+        <div id="u589_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
