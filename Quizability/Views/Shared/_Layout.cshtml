@@ -1,12 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@model Quizability.Models.User
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Quizability</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="../css/site.css" />
+
 
     <!--Axure Styles-->
     <link href="~/axure/css/axure_rp_page.css" type="text/css" rel="stylesheet">
@@ -23,7 +27,7 @@
             <div id="u16" class="ax_default heading_1" style="cursor: pointer;">
                 <div id="u16_div" class="" tabindex="0"></div>
                 <div id="u16_text" class="text ">
-                    <p><span><a href="../Home/Index">Quizability</a></span></p>
+                    <p><span><a href="../Home/Index" class="text-white">Quizability</a></span></p>
 
                 </div>
             </div>
@@ -36,7 +40,7 @@
                 <div id="u23" class="ax_default heading_3" style="cursor: pointer;">
                     <div id="u23_div" class="" tabindex="0"></div>
                     <div id="u23_text" class="text ">
-                        <p><span>Особистий кабінет</span></p>
+                        <p><span><a class="text-white" href="~/UserPage">Особистий кабінет</a></span></p>
                     </div>
                 </div>
             </div>
@@ -48,7 +52,7 @@
                 <div id="u25" class="ax_default heading_3">
                     <div id="u25_div" class="" tabindex="0"></div>
                     <div id="u25_text" class="text ">
-                        <p><span><a href="../Premium/PremiumIndex">Преміум статус</a></span></p>
+                        <p><span><a class="text-white" href="../Premium/PremiumIndex">Преміум статус</a></span></p>
                     </div>
                 </div>
             </div>
@@ -76,19 +80,26 @@
                     </div>
                 </div>
             </div>
-            <div class="auth-buttons">
-                <a type="button" class="auth-button btn" href="~/Account/Login">
-                    <span class="text-white font-weight-bold">
-                    Вхід
-                    </span>
-                </a>
-                <a type="button" class=" auth-button btn" href="~/Account/Register">
-                    <span class="text-white font-weight-bold">
-                       Реєстрація
-                    </span>
-                </a>
-            </div>
-          
+            @if (this.User.Identity.IsAuthenticated)
+            { <form class="auth-buttons"asp-action="Logout" asp-controller="Account">
+                <input type="submit" class="auth-button btn text-white font-weight-bold"  id="logout-btn"  value="Вийти з @this.User.Identity.Name" />
+              </form>
+            }
+            else
+            {
+                <div class="auth-buttons">
+                    <a type="button" class="auth-button btn" href="~/Account/Login">
+                        <span class="text-white font-weight-bold">
+                            Вхід
+                        </span>
+                    </a>
+                    <a type="button" class=" auth-button btn" href="~/Account/Register">
+                        <span class="text-white font-weight-bold">
+                            Реєстрація
+                        </span>
+                    </a>
+                </div>
+            }
         </div>
 
         </div>
