@@ -3016,3 +3016,199 @@ button:active, button:focus {
 button::-moz-focus-inner {
     border: 0;
 }
+
+
+/*FOR UserPage*/
+
+/*левый бокс*/
+#u1056_div {
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 50px;
+    width: 291px;
+    height: 440px;
+    background: inherit;
+    background-color: rgba(242, 242, 242, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(41, 59, 186, 1);
+    border-radius: 25px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1056 {
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 291px;
+    height: 409px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1056 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+}
+
+#u1056_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+/*--------------------*/
+
+/*надписи в блоке*/
+#u1057 {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -150px;
+    width: 240px;
+    height: 22px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #293BBA;
+}
+
+#u1058 {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -190px;
+    width: 240px;
+    height: 22px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #293BBA;
+}
+
+#u1058a {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -75px;
+    width: 240px;
+    height: 22px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #293BBA;
+}
+
+#u1059 {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -25px;
+    width: 240px;
+    height: 22px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #293BBA;
+}
+
+#u1105 {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -48px;
+    width: 240px;
+    height: 22px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #293BBA;
+}
+/*--------------------*/
+
+/*правый блок*/
+#u1061_div {
+    border-width: 0px;
+    position: relative;
+    left: 400px;
+    top: -468px;
+    width: 897px;
+    height: 800px;
+    background: inherit;
+    background-color: rgba(242, 242, 242, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(41, 59, 186, 1);
+    border-radius: 25px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #293BBA;
+}
+
+#u1061 {
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 897px;
+    height: 409px;
+    display: flex;
+    color: #293BBA;
+}
+
+#u1061 .text {
+        position: absolute;
+        align-self: center;
+        padding: 2px 2px 2px 2px;
+        box-sizing: border-box;
+        width: 100%;
+}
+
+#u1061_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+    visibility: hidden;
+}
+
+/*------------------*/
+
+/*правіе надписи*/
+#u1062 {
+    border-width: 0px;
+    position: relative;
+    left: 450px;
+    top: -860px;
+    width: 362px;
+    height: 43px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #293BBA;
+}
