@@ -1953,6 +1953,7 @@ body {
     top: 642px;
     width: 216px;
     height: 67px;
+    border-radius: 25px;
     display: flex;
     font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 400;
@@ -2404,6 +2405,7 @@ body {
     top: 547px;
     width: 235px;
     height: 62px;
+    border-radius: 25px;
     display: flex;
     font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 400;
