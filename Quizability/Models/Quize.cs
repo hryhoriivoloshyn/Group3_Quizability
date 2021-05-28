@@ -10,6 +10,7 @@ namespace Quizability.Models
         public Quize()
         {
             Questions = new HashSet<Question>();
+            UserQuizzes = new HashSet<UserQuiz>();
         }
 
         public int QuizId { get; set; }
@@ -23,5 +24,6 @@ namespace Quizability.Models
 
         public virtual Topic Topic { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
+        public virtual ICollection<UserQuiz> UserQuizzes { get; set; }
     }
 }

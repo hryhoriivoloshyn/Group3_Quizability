@@ -25,6 +25,7 @@ namespace Quizability.Models
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserAchievement> UserAchievements { get; set; }
+        public virtual DbSet<UserQuiz> UserQuizzes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -188,6 +189,41 @@ namespace Quizability.Models
                     .WithMany(p => p.UserAchievements)
                     .HasForeignKey(d => d.UserId)
                     .HasConstraintName("FK_User_Achievement_Users1");
+            });
+
+            modelBuilder.Entity<UserQuiz>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.QuizId });
+
+                entity.ToTable("User_Quiz");
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.Property(e => e.QuizId).HasColumnName("quizId");
+
+                entity.Property(e => e.FinishTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("finishTime");
+
+                entity.Property(e => e.Finished).HasColumnName("finished");
+
+                entity.Property(e => e.Points).HasColumnName("points");
+
+                entity.Property(e => e.RightAnswersAmount).HasColumnName("rightAnswersAmount");
+
+                entity.Property(e => e.StartTme)
+                    .HasColumnType("datetime")
+                    .HasColumnName("startTme");
+
+                entity.HasOne(d => d.Quiz)
+                    .WithMany(p => p.UserQuizzes)
+                    .HasForeignKey(d => d.QuizId)
+                    .HasConstraintName("FK_User_Quiz_Quizes");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.UserQuizzes)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_User_Quiz_Users");
             });
 
             OnModelCreatingPartial(modelBuilder);

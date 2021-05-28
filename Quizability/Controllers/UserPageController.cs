@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Quizability.Controllers
 {
+    [Authorize]
     public class UserPageController : Controller
     {
-        [Authorize]
+
         public IActionResult Index()
         {
             return View();
