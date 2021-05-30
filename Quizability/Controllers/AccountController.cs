@@ -99,6 +99,7 @@ namespace Quizability.Models
                     claim.Type,
                     claim.Value
                 }).Where(claim=>claim.Type== "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress");
+            
             return Json(claims);
         }
         public async Task<IActionResult> Logout()
