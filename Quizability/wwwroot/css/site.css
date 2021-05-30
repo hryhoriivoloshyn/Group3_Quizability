@@ -3749,3 +3749,10 @@ a.nochange:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+/*Quiz details page*/
+.quiz-card{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}

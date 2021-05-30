@@ -21,6 +21,7 @@ namespace Quizability.Models
         public bool Popular { get; set; }
         public int? Difficulty { get; set; }
         public int? TopicId { get; set; }
+        public string ImageSrc { get; set; }
 
         public virtual Topic Topic { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
