@@ -37,7 +37,13 @@ namespace Quizability
                 .AddCookie(options => //CookieAuthenticationOptions
                 {
                     options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
-                });
+                })
+                .AddGoogle(options=>
+                {
+                    options.ClientId = "626183172171-l0mfqkv4967ohh1bmj10he3200b792sv.apps.googleusercontent.com";
+                    options.ClientSecret = "YqAHBp-PxXzfDSdkwSou8ADs";
+                }
+                );
 
             services.AddControllersWithViews();
         }

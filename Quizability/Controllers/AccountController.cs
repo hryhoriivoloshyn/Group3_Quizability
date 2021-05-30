@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Quizability.ViewModels;
@@ -80,7 +81,26 @@ namespace Quizability.Models
             // установка аутентификационных куки
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
         }
+        [Route("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var properties = new AuthenticationProperties() { RedirectUri = Url.Action("GoogleResponse") };
 
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+       
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            var claims = result.Principal.Identities.FirstOrDefault()
+                .Claims.Select(claim => new
+                {
+                    claim.Type,
+                    claim.Value
+                }).Where(claim=>claim.Type== "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress");
+            return Json(claims);
+        }
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
