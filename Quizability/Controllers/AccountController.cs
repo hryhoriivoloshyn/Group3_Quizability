@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Quizability.ViewModels;
@@ -80,7 +81,43 @@ namespace Quizability.Models
             // установка аутентификационных куки
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
         }
+        [Route("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var properties = new AuthenticationProperties() { RedirectUri = Url.Action("GoogleResponse") };
 
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+       
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            var claims = result.Principal.Identities.FirstOrDefault()
+                .Claims.Select(claim => new
+                {
+                    
+                    claim.Type,
+                    claim.Value
+                });
+            var email = claims.Where(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Select(claim => claim.Value);
+            var name= claims.Where(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Select(claim => claim.Value);
+            string password = "";
+            for (int i = 0; i <= 10; i++)
+            {
+                Random rand = new Random();
+                password += rand.Next(0, 9);
+            }
+            User user = await db.Users.FirstOrDefaultAsync(u => u.Email == email.First());
+            if (user == null)
+            {
+                db.Users.Add(new User { Name = name.First(), Email = email.First(), Password =password }); ;
+                await db.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Index", "Home");
+        }
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
