@@ -81,7 +81,7 @@ namespace Quizability.Models
             // установка аутентификационных куки
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
         }
-        [Route("google-login")]
+        
         public IActionResult GoogleLogin()
         {
             var properties = new AuthenticationProperties() { RedirectUri = Url.Action("GoogleResponse") };
