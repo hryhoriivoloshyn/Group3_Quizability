@@ -103,6 +103,10 @@ namespace Quizability.Models
 
                 entity.Property(e => e.Difficulty).HasColumnName("difficulty");
 
+                entity.Property(e => e.ImageSrc)
+                    .HasMaxLength(255)
+                    .HasColumnName("image_src");
+
                 entity.Property(e => e.Popular).HasColumnName("popular");
 
                 entity.Property(e => e.QuizName)
