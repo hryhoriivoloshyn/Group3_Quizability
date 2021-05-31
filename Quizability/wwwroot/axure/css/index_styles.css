@@ -13,7 +13,11 @@
   z-index:0;
 }
 #plates {
-    margin-right: 10px;
+    margin-bottom: 5px;
+}
+#hrefbtn{
+    margin-left: 71px;
+    margin-top: 13px;
 }
 #u0_img {
     width: 100%;
@@ -326,7 +330,8 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     width: 304px;
     height: 48px;
     display: flex;

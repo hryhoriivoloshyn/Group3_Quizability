@@ -40,10 +40,37 @@ namespace Quizability.Controllers
             }
             return Quizes;
         }
-
+        public async Task<List<Topic>> GetTopics()
+        {
+            var topics = new List<Topic>();
+            var allTopics = await db.Topics.ToListAsync();
+            var quizesList = await GetQuizes();
+            var tempList = new List<Quize>();
+            if (allTopics?.Any()==true)
+            {
+                foreach(var topic in allTopics)
+                {
+                    foreach(var quiz in quizesList)
+                    {
+                        if(quiz.TopicId==topic.TopicId)
+                        {
+                            tempList.Add(quiz);
+                        }
+                    }
+                    topics.Add(new Topic()
+                    {
+                        TopicId = topic.TopicId,
+                        TopicName = topic.TopicName,
+                        Quizes = tempList
+                    });
+                }
+                
+            }
+            return topics;
+        }
         public async Task<ViewResult> GetAllQuizes()
         {
-            var data = await GetQuizes();
+            var data = await GetTopics();
             return View(data);
         }
     }
