@@ -105,6 +105,7 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+
 }
 
 
@@ -1089,22 +1090,6 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
-    #u426 .text {
-        position: absolute;
-        align-self: center;
-        padding: 2px 2px 2px 2px;
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-#u426_text {
-    border-width: 0px;
-    word-wrap: break-word;
-    text-transform: none;
-    visibility: hidden;
-}
-
 #u427_img {
     border-width: 0px;
     position: absolute;
@@ -1128,20 +1113,6 @@ body {
     color: #FFFFFF;
 }
 
-    #u427 .text {
-        position: absolute;
-        align-self: center;
-        padding: 2px 2px 2px 2px;
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-#u427_text {
-    border-width: 0px;
-    word-wrap: break-word;
-    text-transform: none;
-    visibility: hidden;
-}
 
 #u428_input {
     position: absolute;
@@ -3029,7 +3000,7 @@ button::-moz-focus-inner {
     left: 0px;
     top: 50px;
     width: 291px;
-    height: 440px;
+    height: 470px;
     background: inherit;
     background-color: rgba(242, 242, 242, 1);
     box-sizing: border-box;
@@ -3075,18 +3046,52 @@ button::-moz-focus-inner {
 /*--------------------*/
 
 /*надписи в блоке*/
+#u426_imgc {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height: 250px;
+}
+
+#u426c {
+    border-width: 0px;
+    position: relative;
+    left: 25px;
+    top: -400px;
+    width: 26px;
+    height: 32px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 #u1057 {
     border-width: 0px;
     position: relative;
     left: 20px;
-    top: -150px;
+    top: -195px;
     width: 240px;
-    height: 22px;
+    height: 35px;
     display: flex;
     font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 18px;
+    color: #293BBA;
+}
+#u1068a {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: -200px;
+    width: 300px;
+    height: 25px;
+    display: flex;
+    font-family: 'SegoeUI ', 'SegoeUI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #293BBA;
 }
 
@@ -3096,7 +3101,7 @@ button::-moz-focus-inner {
     left: 20px;
     top: -190px;
     width: 240px;
-    height: 22px;
+    height: 35px;
     display: flex;
     font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 700;
@@ -3104,49 +3109,17 @@ button::-moz-focus-inner {
     font-size: 18px;
     color: #293BBA;
 }
-
-#u1058a {
+#u1068b {
     border-width: 0px;
     position: relative;
     left: 20px;
-    top: -75px;
-    width: 240px;
-    height: 22px;
+    top: -195px;
+    width: 300px;
+    height: 25px;
     display: flex;
-    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-    font-weight: 700;
+    font-family: 'SegoeUI ', 'SegoeUI', sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: 18px;
-    color: #293BBA;
-}
-
-#u1059 {
-    border-width: 0px;
-    position: relative;
-    left: 20px;
-    top: -25px;
-    width: 240px;
-    height: 22px;
-    display: flex;
-    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
-    color: #293BBA;
-}
-
-#u1105 {
-    border-width: 0px;
-    position: relative;
-    left: 20px;
-    top: -48px;
-    width: 240px;
-    height: 22px;
-    display: flex;
-    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
     color: #293BBA;
 }
 /*--------------------*/
@@ -3156,8 +3129,8 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 400px;
-    top: -468px;
-    width: 750px;
+    top: -540px;
+    width: 710px;
     height: 1400px;
     background: inherit;
     background-color: rgba(242, 242, 242, 1);
@@ -3205,7 +3178,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -860px;
+    top: -930px;
     width: 500px;
     height: 43px;
     display: flex;
@@ -3219,7 +3192,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -850px;
+    top: -900px;
     width: 47px;
     height: 32px;
     display: flex;
@@ -3233,7 +3206,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -840px;
+    top: -890px;
     width: 300px;
     height: 25px;
     display: flex;
@@ -3247,7 +3220,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -820px;
+    top: -870px;
     width: 78px;
     height: 32px;
     display: flex;
@@ -3261,7 +3234,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -810px;
+    top: -860px;
     width: 300px;
     height: 25px;
     display: flex;
@@ -3275,7 +3248,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -790px;
+    top: -840px;
     width: 130px;
     height: 40px;
     display: flex;
@@ -3317,7 +3290,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 600px;
-    top: -830px;
+    top: -880px;
     width: 130px;
     height: 40px;
     display: flex;
@@ -3366,7 +3339,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -780px;
+    top: -830px;
     width: 500px;
     height: 43px;
     display: flex;
@@ -3399,7 +3372,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -750px;
+    top: -800px;
     width: 270px;
     height: 320px;
     display: flex;
@@ -3412,7 +3385,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 485px;
-    top: -1050px;
+    top: -1100px;
     width: 158px;
     height: 24px;
     display: flex;
@@ -3428,7 +3401,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 530px;
-    top: -1020px;
+    top: -1070px;
     width: 182px;
     height: 47px;
     display: flex;
@@ -3445,7 +3418,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 440px;
-    top: -980px;
+    top: -1030px;
     width: 254px;
     height: 92px;
     display: flex;
@@ -3478,8 +3451,8 @@ button::-moz-focus-inner {
 #u1097 {
     border-width: 0px;
     position: relative;
-    left: 750px;
-    top: -1233px;
+    left: 800px;
+    top: -1283px;
     width: 270px;
     height: 320px;
     display: flex;
@@ -3488,8 +3461,8 @@ button::-moz-focus-inner {
 #u1098 {
     border-width: 0px;
     position: relative;
-    left: 760px;
-    top: -1530px;
+    left: 810px;
+    top: -1580px;
     width: 250px;
     height: 106px;
     display: flex;
@@ -3533,8 +3506,8 @@ button::-moz-focus-inner {
 #u1099 {
     border-width: 0px;
     position: relative;
-    left: 763px;
-    top: -1480px;
+    left: 813px;
+    top: -1530px;
     width: 241px;
     height: 78px;
     display: flex;
@@ -3543,8 +3516,8 @@ button::-moz-focus-inner {
 #u1100 {
     border-width: 0px;
     position: relative;
-    left: 825px;
-    top: -1535px;
+    left: 875px;
+    top: -1585px;
     width: 113px;
     height: 31px;
     display: flex;
@@ -3559,8 +3532,8 @@ button::-moz-focus-inner {
 #u1101 {
     border-width: 0px;
     position: relative;
-    left: 820px;
-    top: -1500px;
+    left: 870px;
+    top: -1550px;
     width: 137px;
     height: 37px;
     display: flex;
@@ -3576,7 +3549,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1430px;
+    top: -1480px;
     width: 500px;
     height: 43px;
     display: flex;
@@ -3590,7 +3563,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1200px;
+    top: -1250px;
     width: 500px;
     height: 43px;
     display: flex;
@@ -3603,7 +3576,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1185px;
+    top: -1235px;
     width: 169px;
     height: 32px;
     display: flex;
@@ -3616,7 +3589,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1175px;
+    top: -1225px;
     width: 300px;
     height: 25px;
     display: flex;
@@ -3625,7 +3598,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1150px;
+    top: -1200px;
     width: 241px;
     height: 32px;
     display: flex;
@@ -3638,7 +3611,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1140px;
+    top: -1190px;
     width: 300px;
     height: 25px;
     display: flex;
@@ -3668,7 +3641,7 @@ button::-moz-focus-inner {
     border-width: 0px;
     position: relative;
     left: 430px;
-    top: -1115px;
+    top: -1165px;
     width: 130px;
     height: 40px;
     display: flex;
@@ -3717,8 +3690,8 @@ button::-moz-focus-inner {
 #u1087 {
     border-width: 0px;
     position: relative;
-    left: 630px;
-    top: -1155px;
+    left: 600px;
+    top: -1205px;
     width: 130px;
     height: 40px;
     display: flex;
@@ -3749,6 +3722,131 @@ a.nochange:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+#u118_input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height: 28px;
+    padding: 2px 2px 2px 2px;
+    font-family: 'SegoeUI ', 'SegoeUI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #000000;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    #u118_input.disabled {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 250px;
+        height: 28px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'SegoeUI ', 'SegoeUI', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: normal;
+        color: #000000;
+        text-align: left;
+        text-transform: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+#u118_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height: 28px;
+    background: inherit;
+    background-color: #69d87a;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 6px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.u118_input_option {
+    background-color: #98FB98;
+}
+#u118 {
+    border-width: 0px;
+    position: relative;
+    left: 20px;
+    top: 0px;
+    width: 190px;
+    height: 28px;
+    display: flex;
+}
+
+#u118 .text {
+    position: absolute;
+    color: #69d87a;
+    align-self: flex-start;
+    padding: 2px 2px 2px 2px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#u118_div.disabled {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 205px;
+    height: 28px;
+    background: inherit;
+    background-color:#69d87a;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 6px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*КНОПКА НАВЕРХ*/
+.up {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'SegoeUI ', 'SegoeUI', sans-serif;
+    letter-spacing: 2px;
+    background-color: #69d87a;
+    transition: .15s ease-in-out;
+    border-color: #293bba;
+    z-index: 1;
+}
+
+.up:hover {
+    box-shadow: 0 0 10px ;
+    color: #0b0a42;
+}
+
+.scrollUp {
+    position: fixed; 
+    right: 10px;
+    bottom: 10px;
+}
+
 
 /*Quiz details page*/
 .quiz-card{

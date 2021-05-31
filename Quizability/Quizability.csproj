@@ -8,6 +8,7 @@
   <ItemGroup>
     <Folder Include="Views\Home\Images\" />
     <None Include="wwwroot\images\backgroundTopImage.png" />
+    <None Include="wwwroot\Images\letter.png" />
     <Folder Include="Views\Forget\" />
   </ItemGroup>
 
