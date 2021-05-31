@@ -1,34 +1,42 @@
-﻿<div id="u1056" class="ax_default box_1">
+﻿
+<div id="u1056" class="ax_default box_1">
 	<div id="u1056_div" class=""></div>
 	<div id="u1056_text" class="text " style="display:none; visibility: hidden">
 		<p></p>
 	</div>
 </div>
 
+<!-- droplist (Droplist) -->
+<div id="u118" class="ax_default droplist" data-label="droplist">
+	<div id="u118_div" class=""></div>
+	<select id="u118_input" class="u118_input" onchange="location.hash = this.value ? this.value : ''">
+		<option class="u118_input_option" selected value="#point1">Основні налаштування</option>
+		<option class="u118_input_option" value="#point2">Підписка</option>
+		<option class="u118_input_option" value="#point3">Досягнення</option>
+		<option class="u118_input_option" value="#point4">Змінити пароль</option>
+	</select>
+</div>
+
+<div id="u426c" class="ax_default icon">
+	<img id="u426_imgc" class="img " src="~/images/letter.png" />
+</div>
 
 <div id="u1057" class="ax_default label">
-	<p><span>Основні налаштування</span></p>
+	<p><span>Ім'я</span></p>
 </div>
-
-
-<div id="u1058a" class="ax_default label">
-	<p><span>Досягнення</span></p>
-</div>
-
-
-<div id="u1105" class="ax_default label">
-	<p><span>Змінити пароль</span></p>
-</div>
-
-
-<div id="u1059" class="ax_default label">
-	<p><span>Повідомлення</span></p>
+<div id="u1068a" class="ax_default label">
+	<p><span>тут имя</span></p>
 </div>
 
 
 <div id="u1058" class="ax_default label">
-	<p><span>Підписка</span></p>
+	<p><span>Пошта</span></p>
 </div>
+<div id="u1068b" class="ax_default label">
+	<p><span>тут почта</span></p>
+</div>
+
+
 
 
 
@@ -42,8 +50,9 @@
 </div>
 
 <div id="u1062" class="ax_default heading_1">
-	<p><span>ОСНОВНІ НАЛАШТУВАННЯ</span></p>
+	<p id="point1"><span>ОСНОВНІ НАЛАШТУВАННЯ</span></p>
 </div>
+
 
 <div id="u1064" class="ax_default heading_2">
 	<p><span>Ім'я</span></p>
@@ -86,7 +95,7 @@
 <!-- ПІДПИСКА -->
 
 <div id="u1062a" class="ax_default heading_1">
-	<p><span>ПІДПИСКА</span></p>
+	<p id="point2"><span>ПІДПИСКА</span></p>
 </div>
 
 <div id="u1093" class="ax_default box_3">
@@ -154,9 +163,8 @@
 
 
 <!-- ДОСЯГНЕННЯ-->
-
 <div id="u1062b" class="ax_default heading_1">
-	<p><span>ДОСЯГНЕННЯ</span></p>
+	<p id="point3"><span>ДОСЯГНЕННЯ</span></p>
 </div>
 
 
@@ -164,25 +172,25 @@
 <!--ЗМІНИТИ ПАРОЛЬ -->
 
 <div id="u1062с" class="ax_default heading_1">
-	<p><span>ЗМІНИТИ ПАРОЛЬ</span></p>
+	<p id="point4"><span>ЗМІНИТИ ПАРОЛЬ</span></p>
 </div>
 
-	<form>
-		<div id="u1088" class="ax_default heading_2">
-			<p><span>Новий пароль</span></p>
-		</div>
-	</form>
+<form>
+	<div id="u1088" class="ax_default heading_2">
+		<p><span>Новий пароль</span></p>
+	</div>
+</form>
 
 
 <div id="u1089" class="ax_default text_field">
 	<input id="u1089_input" type="password" value="" class="u1089_input" />
 </div>
 
-	<form>
-		<div id="u1090" class="ax_default heading_2">
-			<p><span>Підтвердити пароль</span></p>
-		</div>
-	</form>
+<form>
+	<div id="u1090" class="ax_default heading_2">
+		<p><span>Підтвердити пароль</span></p>
+	</div>
+</form>
 
 
 <div id="u1091" class="ax_default text_field">
@@ -204,3 +212,44 @@
 		<p><span>Відмінити</span></p>
 	</div>
 </button>
+
+<div class="scrollUp">
+	<button class="up" id="upButton">Вгору</button>
+</div>
+
+<script>
+	window.onload = function () {
+		let scrolled;
+		let timer;
+		document.getElementById('upButton').onclick = function () {
+			scrolled = window.pageYOffset;
+			scrollToTop();
+		}
+
+		function scrollToTop() {
+			if (scrolled > 0 && scrolled <= 500) {
+				window.scrollTo(0, scrolled);
+				scrolled = scrolled - 25;
+				timer = setTimeout(scrollToTop, 5);
+			}
+			else if (scrolled > 500 && scrolled <= 1000) {
+				window.scrollTo(0, scrolled);
+				scrolled = scrolled - 20;
+				timer = setTimeout(scrollToTop, 5);
+			}
+			else if (scrolled > 1000 && scrolled <= 1500) {
+				window.scrollTo(0, scrolled);
+				scrolled = scrolled - 15;
+				timer = setTimeout(scrollToTop, 5);
+			} else if (scrolled > 1500) {
+				window.scrollTo(0, scrolled);
+				scrolled = scrolled - 13;
+				timer = setTimeout(scrollToTop, 5);
+			}
+			else {
+				clearTimeout(timer);
+				window.scrollTo(0, 0);
+			}
+		}
+	}
+</script>
