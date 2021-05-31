@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Quize> 
+<div class="container">
+    <div id="u7_diff" class="ax_default heading_3">
+        <div id="u7_div_diff" class="">
+            <div id="u7_text" class="text ">
+                <p><span>Вікторини</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var quiz in Model)
+        {
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/images/QuizImages/c++image.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@quiz.QuizName</h5>
+                    <p class="card-text">@quiz.Description</p>
+                    <a href="#" class="btn btn-primary">Розпочати</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
