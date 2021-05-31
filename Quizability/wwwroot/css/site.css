@@ -3752,7 +3752,25 @@ a.nochange:hover {
 
 /*Quiz details page*/
 .quiz-card{
+    width: 50%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
+.quiz-content{
+    margin: 10px 20px;
+}
+#quiz-button{
+    width: min-content;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+    #quiz-button a {
+        font-size: 30px;
+        padding: 9px 35px;
+        border: none;
+        background-color: rgba(105, 216, 122, 1);
+        border-radius: 5px;
+    }

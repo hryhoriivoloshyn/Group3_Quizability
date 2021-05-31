@@ -1,0 +1,24 @@
+﻿@model Quizability.Models.Quize
+
+<div class="container">
+    <div class="card quiz-card">
+        <div class="quiz-content">
+            <img class="card-img-top" src=@Model.ImageSrc alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@Model.QuizName</h5>
+                <p class="card-text">@Model.Description</p>
+                <ul>
+                    <li>Обмеження по часу: @Model.QuizTime</li>
+                    <li>Складність: @Model.Difficulty</li>
+                    <li>Максимальна кількість балів: @ViewBag.MaxPoints </li>
+                    <li>Рейтинг: @Model.Rating/5</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-button">
+        <a href="" class="btn btn-primary">Розпочати</a>
+    </div>
+</div>
