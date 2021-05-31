@@ -1,5 +1,19 @@
-﻿@{
+﻿@model IEnumerable<Topic>
+@{
     ViewData["Title"] = "Home Page";
+}
+@{
+    List<Topic> templ = Model.Where(t => t.TopicName == "Тимчасові вікторини").ToList();
+    Quize quiz;
+    if (templ?.Any()==true)
+    {
+        quiz = templ.FirstOrDefault().Quizes.Where(q => q.TopicId == 3).LastOrDefault();
+    }
+    else
+    {
+        templ = Model.Where(t => t.TopicName != "Тимчасові вікторини").ToList();
+        quiz = templ.LastOrDefault().Quizes.Where(q=>q.TopicId==templ.FirstOrDefault().TopicId).LastOrDefault();
+    }
 }
 <div id="u0" class="ax_default image">
     <img id="u0_img" class="img" src="~/images/backgroundTopImage.jpg">
@@ -23,25 +37,19 @@
 <div id="u7" class="ax_default heading_3">
     <div id="u7_div" class=""></div>
     <div id="u7_text" class="text ">
-        <p><span>Тимчасові вікторини</span></p>
+        <p><span>@templ.FirstOrDefault().TopicName</span></p>
     </div>
 </div>
+
 <!-- Unnamed (Rectangle) -->
-<div id="u8" class="ax_default box_2">
-    <div id="u8_div" class=""></div>
-    <img id="u9_img" class="img " src="images/index/regen/u9.svg" />
-    <div id="u8_text" class="text " style="display:none; visibility: hidden">
-        <p></p>
-    </div>
-    <!-- Unnamed (Rectangle) -->
-    <div id="u11" class="ax_default heading_3">
-        <div id="u11_text" class="text ">
-            <p><span>Основи програмування </span></p>
+    <div class="card quiz-card" style="margin-bottom: 25px">
+        <img class="card-img-top" src=@templ.FirstOrDefault().Quizes.FirstOrDefault().ImageSrc alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align:center">@quiz.QuizName</h5>
+            <p class="card-text" style="text-align:center">@quiz.Description</p>
+            <div id="hrefbtn">
+                <a href="/Quiz/Details/@quiz.QuizId" class="btn btn-primary">Розпочати</a>
+            </div>
         </div>
     </div>
-    <div id="u10_div" class=""></div>
-    <div id="u10_text" class="text ">
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et mag</span></p><p><span>Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </span></p>
-    </div>
-</div>
 
