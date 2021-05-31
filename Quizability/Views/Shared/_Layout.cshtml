@@ -1,4 +1,4 @@
-﻿@model Quizability.Models.User
+﻿
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Quizability</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="/css/site.css" />
 
 
     <!--Axure Styles-->
-    <link href="~/axure/css/axure_rp_page.css" type="text/css" rel="stylesheet">
-    <link href="~/axure/css/data_styles.css" type="text/css" rel="stylesheet">
-    <link href="~/axure/css/index_styles.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="../../wwwroot/axure/css/PremiumStyle.css" />
+    <link href="/axure/css/axure_rp_page.css" type="text/css" rel="stylesheet">
+    <link href="/axure/css/data_styles.css" type="text/css" rel="stylesheet">
+    <link href="/axure/css/index_styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/axure/css/PremiumStyle.css" />
 </head>
 <body>
     <!-------------Header!---------->
@@ -27,7 +27,7 @@
             <div id="u16" class="ax_default heading_1" style="cursor: pointer;">
                 <div id="u16_div" class="" tabindex="0"></div>
                 <div id="u16_text" class="text ">
-                    <p><span><a href="../Home/Index" class="text-white">Quizability</a></span></p>
+                    <p><span><a href="/Home/Index" class="text-white">Quizability</a></span></p>
 
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div id="u23" class="ax_default heading_3" style="cursor: pointer;">
                     <div id="u23_div" class="" tabindex="0"></div>
                     <div id="u23_text" class="text ">
-                        <p><span><a class="text-white" href="~/UserPage">Особистий кабінет</a></span></p>
+                        <p><span><a class="text-white" href="/UserPage">Особистий кабінет</a></span></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div id="u25" class="ax_default heading_3">
                     <div id="u25_div" class="" tabindex="0"></div>
                     <div id="u25_text" class="text ">
-                        <p><span><a class="text-white" href="../Premium/PremiumIndex">Преміум статус</a></span></p>
+                        <p><span><a class="text-white" href="/Premium/PremiumIndex">Преміум статус</a></span></p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 <div id="u27" class="ax_default heading_3">
                     <div id="u27_div" class="" tabindex="0"></div>
                     <div id="u27_text" class="text ">
-                        <p><span>Каталог вікторин</span></p>
+                        <p><span><a class="text-white" href="~/QuizesCatalogue/GetAllQuizes">Каталог вікторин</a></span></p>
                     </div>
                 </div>
             </div>
@@ -88,12 +88,12 @@
             else
             {
                 <div class="auth-buttons">
-                    <a type="button" class="auth-button btn" href="~/Account/Login">
+                    <a type="button" class="auth-button btn" href="/Account/Login">
                         <span class="text-white font-weight-bold">
                             Вхід
                         </span>
                     </a>
-                    <a type="button" class=" auth-button btn" href="~/Account/Register">
+                    <a type="button" class=" auth-button btn" href="/Account/Register">
                         <span class="text-white font-weight-bold">
                             Реєстрація
                         </span>
