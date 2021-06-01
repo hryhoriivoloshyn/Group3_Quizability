@@ -197,13 +197,17 @@ namespace Quizability.Models
 
             modelBuilder.Entity<UserQuiz>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.QuizId });
+                entity.HasKey(e => new { e.UserId, e.QuizId, e.StartTme });
 
                 entity.ToTable("User_Quiz");
 
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.Property(e => e.QuizId).HasColumnName("quizId");
+
+                entity.Property(e => e.StartTme)
+                    .HasColumnType("datetime")
+                    .HasColumnName("startTme");
 
                 entity.Property(e => e.FinishTime)
                     .HasColumnType("datetime")
@@ -214,10 +218,6 @@ namespace Quizability.Models
                 entity.Property(e => e.Points).HasColumnName("points");
 
                 entity.Property(e => e.RightAnswersAmount).HasColumnName("rightAnswersAmount");
-
-                entity.Property(e => e.StartTme)
-                    .HasColumnType("datetime")
-                    .HasColumnName("startTme");
 
                 entity.HasOne(d => d.Quiz)
                     .WithMany(p => p.UserQuizzes)
