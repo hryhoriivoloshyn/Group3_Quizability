@@ -3131,7 +3131,7 @@ button::-moz-focus-inner {
     left: 400px;
     top: -540px;
     width: 710px;
-    height: 1400px;
+    height: 1430px;
     background: inherit;
     background-color: rgba(242, 242, 242, 1);
     box-sizing: border-box;
@@ -3557,6 +3557,19 @@ button::-moz-focus-inner {
     font-weight: 700;
     font-style: normal;
     color: #293BBA;
+}
+#u1062ba {
+    border-width: 0px;
+    position: relative;
+    top: -1470px;
+    left: 425px;
+    width: 660px;
+    height: 43px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
 }
 
 #u1062с {

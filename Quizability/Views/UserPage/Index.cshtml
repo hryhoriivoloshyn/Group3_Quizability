@@ -1,237 +1,271 @@
-﻿<div id="u1056" class="ax_default box_1">
-	<div id="u1056_div" class=""></div>
-	<div id="u1056_text" class="text " style="display:none; visibility: hidden">
-		<p></p>
-	</div>
+﻿@model IEnumerable<UserAchievement>
+@{ 
+    User user = Model.Select(m => m.User).FirstOrDefault();
+}
+<div>
+    <div id="u1056" class="ax_default box_1">
+        <div id="u1056_div" class=""></div>
+        <div id="u1056_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <!-- droplist (Droplist) -->
+    <div id="u118" class="ax_default droplist" data-label="droplist">
+        <div id="u118_div" class=""></div>
+        <select id="u118_input" class="u118_input" onchange="location.hash = this.value ? this.value : ''">
+            <option class="u118_input_option" selected value="#point1">Основні налаштування</option>
+            <option class="u118_input_option" value="#point2">Підписка</option>
+            <option class="u118_input_option" value="#point3">Досягнення</option>
+            <option class="u118_input_option" value="#point4">Змінити пароль</option>
+        </select>
+    </div>
+
+    <div id="u426c" class="ax_default icon">
+        <img id="u426_imgc" class="img " src="~/images/letter.png" />
+    </div>
+
+    <div id="u1057" class="ax_default label">
+        <p><span>Ім'я</span></p>
+    </div>
+    <div id="u1068a" class="ax_default label">
+        <p><span>@user.Name</span></p>
+    </div>
+
+    <div id="u1058" class="ax_default label">
+        <p><span>Пошта</span></p>
+    </div>
+    <div id="u1068b" class="ax_default label">
+        <p><span>@user.Email</span></p>
+    </div>
+
+
+    <!-- ОСНОВНІ НАЛАШТУВАННЯ -->
+
+
+    <div id="u1061" class="ax_default box_1">
+        <div id="u1061_div" class=""></div>
+        <div id="u1061_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <div id="u1062" class="ax_default heading_1">
+        <p id="point1"><span>ОСНОВНІ НАЛАШТУВАННЯ</span></p>
+    </div>
+
+
+    <div id="u1064" class="ax_default heading_2">
+        <p><span>Ім'я</span></p>
+    </div>
+
+    <form>
+        <div id="u1063" class="ax_default text_field">
+            <input type="text" value="@user.Name" />
+        </div>
+    </form>
+
+    <div id="u1065" class="ax_default heading_2">
+        <p><span>Пошта</span></p>
+    </div>
+
+    <div id="u1068" class="ax_default label">
+        <p><span>@user.Email</span></p>
+    </div>
+
+    <button id="u1066" class="ax_default primary_button">
+        <div id="u1066_div" class=""></div>
+        <div id="u1066_text" class="text ">
+            <p><span>Підтвердити</span></p>
+        </div>
+    </button>
+
+    <button id="u1067" class="ax_default button">
+        <div id="u1067_div" class=""></div>
+        <div id="u1067_text" class="text ">
+            <p><span>Відмінити</span></p>
+        </div>
+    </button>
+
+
+    <!-- ПІДПИСКА -->
+
+    <div id="u1062a" class="ax_default heading_1">
+        <p id="point2"><span>ПІДПИСКА</span></p>
+    </div>
+
+    <div id="u1093" class="ax_default box_3">
+        <div id="u1093_div" class=""></div>
+        <div id="u1093_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <div id="u1094" class="ax_default heading_3">
+        <p><span>Поточна підписка</span></p>
+    </div>
+
+    <div id="u1095" class="ax_default heading_1">
+        <p><span>Free</span></p>
+    </div>
+
+    <div id="u1096" class="ax_default paragraph">
+        <div id="u1096_div" class=""></div>
+        <div id="u1096_text" class="text ">
+            <p><span>За підпискою Ви маєте можливість:</span></p><p><span>-3 рази на день проходити вікторини без реклами</span></p><p><span>-усі вікторини, окрім Сезонних</span></p>
+        </div>
+    </div>
+
+    <div id="u1097" class="ax_default box_1">
+        <div id="u1097_div" class=""></div>
+        <div id="u1097_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <div id="u1098" class="ax_default paragraph">
+        <div id="u1098_div" class=""></div>
+        <div id="u1098_text" class="text ">
+            <p><span>Придбавши підписку ви отримуєте:<br>-безлімітну кілкість вікторин<br>без реклами</span></p><p><span>-доступ до Поточних та Сезонних вікторин</span></p>
+        </div>
+    </div>
+
+
+    <div id="u1101" class="ax_default heading_1">
+        <div id="u1101_div" class=""></div>
+        <div id="u1101_text" class="text ">
+            <p><span>Від 75 грн</span></p>
+        </div>
+    </div>
+
+    <form action="~/Premium/PremiumIndex">
+        <button id="u1099" class="ax_default box_1" href="~/Premium/PremiumIndex">
+            <div id="u1099_div" class=""></div>
+            <div id="u1099_text" class="text ">
+            </div>
+        </button>
+    </form>
+
+    <div id="u1100" class="ax_default heading_3">
+        <div id="u1100_div" class=""></div>
+        <div id="u1100_text" class="text ">
+            <a href="~/Premium/PremiumIndex" class="nochange"><p><span>Придбати </span></p></a>
+        </div>
+    </div>
+
+
+    <!-- ДОСЯГНЕННЯ-->
+    <div>
+        <div id="u1062b" class="ax_default heading_1">
+            <p id="point3"><span>ДОСЯГНЕННЯ</span></p>
+        </div>
+
+        <div id="u1062ba">
+            <table border="3" bgcolor="lightgrey" align="center" cellpadding="5px">
+                <tr>
+                    <th>
+                        Назва досягнення
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+                        Дата отримання
+                    </th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    Achievement achievement = Model.Where(s => s.AchievementId == item.AchievementId).Select(s => s.Achievement).FirstOrDefault();
+                    <tr>
+                        <td>@achievement.AchievementName</td>
+                        <td>@achievement.AchievementText</td>
+                        <td>@item.ObtainingTime</td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+
+    <!--ЗМІНИТИ ПАРОЛЬ -->
+
+    <div id="u1062с" class="ax_default heading_1">
+        <p id="point4"><span>ЗМІНИТИ ПАРОЛЬ</span></p>
+    </div>
+
+    <form>
+        <div id="u1088" class="ax_default heading_2">
+            <p><span>Новий пароль</span></p>
+        </div>
+    </form>
+
+    <div id="u1089" class="ax_default text_field">
+        <input id="u1089_input" type="password" value="" class="u1089_input" />
+    </div>
+
+    <form>
+        <div id="u1090" class="ax_default heading_2">
+            <p><span>Підтвердити пароль</span></p>
+        </div>
+    </form>
+
+    <div id="u1091" class="ax_default text_field">
+        <input id="u1091_input" type="password" value="" class="u1091_input" />
+    </div>
+
+    <button id="u1086" class="ax_default primary_button">
+        <div id="u1086_div" class=""></div>
+        <div id="u1086_text" class="text ">
+            <p><span>Підтвердити</span></p>
+        </div>
+    </button>
+
+    <button id="u1087" class="ax_default button">
+        <div id="u1087_div" class=""></div>
+        <div id="u1087_text" class="text ">
+            <p><span>Відмінити</span></p>
+        </div>
+    </button>
+
+    <div class="scrollUp">
+        <button class="up" id="upButton">Вгору</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            let scrolled;
+            let timer;
+            document.getElementById('upButton').onclick = function () {
+                scrolled = window.pageYOffset;
+                scrollToTop();
+            }
+
+            function scrollToTop() {
+                if (scrolled > 0 && scrolled <= 500) {
+                    window.scrollTo(0, scrolled);
+                    scrolled = scrolled - 25;
+                    timer = setTimeout(scrollToTop, 5);
+                }
+                else if (scrolled > 500 && scrolled <= 1000) {
+                    window.scrollTo(0, scrolled);
+                    scrolled = scrolled - 20;
+                    timer = setTimeout(scrollToTop, 5);
+                }
+                else if (scrolled > 1000 && scrolled <= 1500) {
+                    window.scrollTo(0, scrolled);
+                    scrolled = scrolled - 15;
+                    timer = setTimeout(scrollToTop, 5);
+                } else if (scrolled > 1500) {
+                    window.scrollTo(0, scrolled);
+                    scrolled = scrolled - 13;
+                    timer = setTimeout(scrollToTop, 5);
+                }
+                else {
+                    clearTimeout(timer);
+                    window.scrollTo(0, 0);
+                }
+            }
+        }
+    </script>
 </div>
 
-<!-- droplist (Droplist) -->
-<div id="u118" class="ax_default droplist" data-label="droplist">
-	<div id="u118_div" class=""></div>
-	<select id="u118_input" class="u118_input" onchange="location.hash = this.value ? this.value : ''">
-		<option class="u118_input_option" selected value="#point1">Основні налаштування</option>
-		<option class="u118_input_option" value="#point2">Підписка</option>
-		<option class="u118_input_option" value="#point3">Досягнення</option>
-		<option class="u118_input_option" value="#point4">Змінити пароль</option>
-	</select>
-</div>
-
-<div id="u426c" class="ax_default icon">
-	<img id="u426_imgc" class="img " src="~/images/letter.png" />
-</div>
-
-<div id="u1057" class="ax_default label">
-	<p><span>Ім'я</span></p>
-</div>
-<div id="u1068a" class="ax_default label">
-	<p><span>тут имя</span></p>
-</div>
-
-<div id="u1058" class="ax_default label">
-	<p><span>Пошта</span></p>
-</div>
-<div id="u1068b" class="ax_default label">
-	<p><span>тут почта</span></p>
-</div>
-
-
-<!-- ОСНОВНІ НАЛАШТУВАННЯ -->
-
-
-<div id="u1061" class="ax_default box_1">
-	<div id="u1061_div" class=""></div>
-	<div id="u1061_text" class="text " style="display:none; visibility: hidden">
-		<p></p>
-	</div>
-</div>
-
-<div id="u1062" class="ax_default heading_1">
-	<p id="point1"><span>ОСНОВНІ НАЛАШТУВАННЯ</span></p>
-</div>
-
-
-<div id="u1064" class="ax_default heading_2">
-	<p><span>Ім'я</span></p>
-</div>
-
-<form>
-	<div id="u1063" class="ax_default text_field">
-		<input type="text" value="user_name" />
-	</div>
-</form>
-
-<div id="u1065" class="ax_default heading_2">
-	<p><span>Пошта</span></p>
-</div>
-
-<div id="u1068" class="ax_default label">
-	<p><span>example@gmail.com</span></p>
-</div>
-
-<button id="u1066" class="ax_default primary_button">
-	<div id="u1066_div" class=""></div>
-	<div id="u1066_text" class="text ">
-		<p><span>Підтвердити</span></p>
-	</div>
-</button>
-
-<button id="u1067" class="ax_default button">
-	<div id="u1067_div" class=""></div>
-	<div id="u1067_text" class="text ">
-		<p><span>Відмінити</span></p>
-	</div>
-</button>
-
-
-<!-- ПІДПИСКА -->
-
-<div id="u1062a" class="ax_default heading_1">
-	<p id="point2"><span>ПІДПИСКА</span></p>
-</div>
-
-<div id="u1093" class="ax_default box_3">
-	<div id="u1093_div" class=""></div>
-	<div id="u1093_text" class="text " style="display:none; visibility: hidden">
-		<p></p>
-	</div>
-</div>
-
-<div id="u1094" class="ax_default heading_3">
-	<p><span>Поточна підписка</span></p>
-</div>
-
-<div id="u1095" class="ax_default heading_1">
-	<p><span>Free</span></p>
-</div>
-
-<div id="u1096" class="ax_default paragraph">
-	<div id="u1096_div" class=""></div>
-	<div id="u1096_text" class="text ">
-		<p><span>За підпискою Ви маєте можливість:</span></p><p><span>-3 рази на день проходити вікторини без реклами</span></p><p><span>-усі вікторини, окрім Сезонних</span></p>
-	</div>
-</div>
-
-<div id="u1097" class="ax_default box_1">
-	<div id="u1097_div" class=""></div>
-	<div id="u1097_text" class="text " style="display:none; visibility: hidden">
-		<p></p>
-	</div>
-</div>
-
-<div id="u1098" class="ax_default paragraph">
-	<div id="u1098_div" class=""></div>
-	<div id="u1098_text" class="text ">
-		<p><span>Придбавши підписку ви отримуєте:<br>-безлімітну кілкість вікторин<br>без реклами</span></p><p><span>-доступ до Поточних та Сезонних вікторин</span></p>
-	</div>
-</div>
-
-
-<div id="u1101" class="ax_default heading_1">
-	<div id="u1101_div" class=""></div>
-	<div id="u1101_text" class="text ">
-		<p><span>Від 75 грн</span></p>
-	</div>
-</div>
-
-<form action="~/Premium/PremiumIndex">
-	<button id="u1099" class="ax_default box_1" href="~/Premium/PremiumIndex">
-		<div id="u1099_div" class=""></div>
-		<div id="u1099_text" class="text ">
-		</div>
-	</button>
-</form>
-
-<div id="u1100" class="ax_default heading_3">
-	<div id="u1100_div" class=""></div>
-	<div id="u1100_text" class="text ">
-		<a href="~/Premium/PremiumIndex" class="nochange"><p><span>Придбати </span></p></a>
-	</div>
-</div>
-
-
-<!-- ДОСЯГНЕННЯ-->
-<div id="u1062b" class="ax_default heading_1">
-	<p id="point3"><span>ДОСЯГНЕННЯ</span></p>
-</div>
-
-
-<!--ЗМІНИТИ ПАРОЛЬ -->
-
-<div id="u1062с" class="ax_default heading_1">
-	<p id="point4"><span>ЗМІНИТИ ПАРОЛЬ</span></p>
-</div>
-
-<form>
-	<div id="u1088" class="ax_default heading_2">
-		<p><span>Новий пароль</span></p>
-	</div>
-</form>
-
-<div id="u1089" class="ax_default text_field">
-	<input id="u1089_input" type="password" value="" class="u1089_input" />
-</div>
-
-<form>
-	<div id="u1090" class="ax_default heading_2">
-		<p><span>Підтвердити пароль</span></p>
-	</div>
-</form>
-
-<div id="u1091" class="ax_default text_field">
-	<input id="u1091_input" type="password" value="" class="u1091_input" />
-</div>
-
-<button id="u1086" class="ax_default primary_button">
-	<div id="u1086_div" class=""></div>
-	<div id="u1086_text" class="text ">
-		<p><span>Підтвердити</span></p>
-	</div>
-</button>
-
-<button id="u1087" class="ax_default button">
-	<div id="u1087_div" class=""></div>
-	<div id="u1087_text" class="text ">
-		<p><span>Відмінити</span></p>
-	</div>
-</button>
-
-<div class="scrollUp">
-	<button class="up" id="upButton">Вгору</button>
-</div>
-
-<script>
-	window.onload = function () {
-		let scrolled;
-		let timer;
-		document.getElementById('upButton').onclick = function () {
-			scrolled = window.pageYOffset;
-			scrollToTop();
-		}
-
-		function scrollToTop() {
-			if (scrolled > 0 && scrolled <= 500) {
-				window.scrollTo(0, scrolled);
-				scrolled = scrolled - 25;
-				timer = setTimeout(scrollToTop, 5);
-			}
-			else if (scrolled > 500 && scrolled <= 1000) {
-				window.scrollTo(0, scrolled);
-				scrolled = scrolled - 20;
-				timer = setTimeout(scrollToTop, 5);
-			}
-			else if (scrolled > 1000 && scrolled <= 1500) {
-				window.scrollTo(0, scrolled);
-				scrolled = scrolled - 15;
-				timer = setTimeout(scrollToTop, 5);
-			} else if (scrolled > 1500) {
-				window.scrollTo(0, scrolled);
-				scrolled = scrolled - 13;
-				timer = setTimeout(scrollToTop, 5);
-			}
-			else {
-				clearTimeout(timer);
-				window.scrollTo(0, 0);
-			}
-		}
-	}
-</script>
