@@ -8,11 +8,17 @@
 
 
 <div class="container">
-
-    <span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span>
-    <span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span>
-    <span>Затрачени час: @usedTime хв</span>
-    <span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span>
-    <span>Ваш результат: @resultUserQuiz.Points балів</span>
+    <div id="result-header">
+        <span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span>
+    </div>
+    <div id="result-body">
+        <span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span>
+        <span>Затрачени час: @usedTime хв</span>
+        <span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span>
+    </div>
+    <div id="user-points">
+        <span>Ваш результат: @resultUserQuiz.Points балів</span>
+    </div>
+   
 
 </div>
