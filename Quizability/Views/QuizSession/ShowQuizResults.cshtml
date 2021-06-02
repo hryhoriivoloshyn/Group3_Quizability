@@ -3,7 +3,10 @@
     int userId = ViewBag.UserId;
     int quizId = ViewBag.QuizId;
     UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
-    TimeSpan usedTime = resultUserQuiz.FinishTime - resultUserQuiz.FinishTime;
+    TimeSpan usedTimeSpan = resultUserQuiz.FinishTime - resultUserQuiz.StartTme;
+   string usedTime= string.Format("{0}:{1:00}",
+        (int)usedTimeSpan.TotalMinutes, // <== Note the casting to int.
+        usedTimeSpan.Seconds);
 }
 
 
@@ -31,12 +34,12 @@
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1760" class="ax_default heading_2">
-    <p><span>Затрачени час: @usedTime хв</span></p>
+    <p><span>Затрачений час: @usedTime хв</span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1759" class="ax_default heading_2">
-    <p><span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span></p>
+    <p><span>Правильні відповіді: @resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span></p>
 </div>
 
 
@@ -65,16 +68,4 @@
 <div id="u1690" class="ax_default box_1">
     <div id="u1690_div" class=""></div>
 </div>
-<!--
 
-
-<div class="container">
-
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-
-</div>
-    -->

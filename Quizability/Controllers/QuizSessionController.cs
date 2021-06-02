@@ -118,25 +118,28 @@ namespace Quizability.Controllers
         [Route("QuizResults/{quizId}")]
         public IActionResult ShowQuizResults(int quizId)
         {
-            DateTime time = (DateTime)TempData["time"];
+            
             string userEmail = this.User.Identity.Name;
             User user = db.Users.FirstOrDefault(u => u.Email == userEmail);
-            Achievement forUser = db.Achievements.Where(a => a.QuizId == quizId).First();
-            int check = db.UserAchievements.Where(ua => ua.AchievementId == forUser.AchievementId && ua.UserId == user.UserId).Count();
-            if(check==0)
+            DateTime? time = (DateTime?)TempData["time"];
+            if (time != null)
             {
-                UserAchievement testAch = new UserAchievement()
+                Achievement forUser = db.Achievements.Where(a => a.QuizId == quizId).First();
+                int check = db.UserAchievements.Where(ua => ua.AchievementId == forUser.AchievementId && ua.UserId == user.UserId).Count();
+                if (check == 0)
                 {
-                    AchievementId = forUser.AchievementId,
-                    UserId = user.UserId,
-                    ObtainingTime = time,
-                    Achievement = forUser,
-                    User = user
-                };
-                db.UserAchievements.Add(testAch);
-                db.SaveChanges();
+                    UserAchievement testAch = new UserAchievement()
+                    {
+                        AchievementId = forUser.AchievementId,
+                        UserId = user.UserId,
+                        ObtainingTime = time,
+                        Achievement = forUser,
+                        User = user
+                    };
+                    db.UserAchievements.Add(testAch);
+                    db.SaveChanges();
+                }
             }
-
             Quize quiz = db.Quizes.FirstOrDefault(q=>q.QuizId==quizId);
 
             ViewBag.UserId=user.UserId;

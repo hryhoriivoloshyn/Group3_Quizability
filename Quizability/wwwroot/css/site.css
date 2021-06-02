@@ -1,7 +1,14 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-
+.back_image {
+    width: 100%;
+    height: 90%;
+    background-image: url(/Images/back.png);
+    background-repeat: repeat;
+    position: absolute;
+    box-sizing: border-box;
+}
 span {
     font-family: Segoe UI;
 }
@@ -4072,7 +4079,7 @@ a.nochange:hover {
 #u1656 {
     border-width: 0px;
     position: relative;
-    left: 330px;
+    left: 280px;
     top: -10px;
     width: 800px;
     height: 43px;
@@ -4080,7 +4087,7 @@ a.nochange:hover {
     font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: black;
+    color: white;
     z-index: 1;
 }
 
@@ -4133,7 +4140,7 @@ a.nochange:hover {
 #u1759 {
     border-width: 0px;
     position: relative;
-    left: 420px;
+    left: 443px;
     top: -295px;
     width: 300px;
     height: 32px;
@@ -4159,7 +4166,7 @@ a.nochange:hover {
 #u1761 {
     border-width: 0px;
     position: relative;
-    left: 459px;
+    left: 445px;
     top: -365px;
     width: 300px;
     height: 28px;
@@ -4219,7 +4226,7 @@ a.nochange:hover {
     font-weight: 700;
     font-style: normal;
     font-size: 33px;
-    color: black;
+    color: white;
 }
 
 #u1757_div {
@@ -4299,19 +4306,49 @@ a.nochange:hover {
     font-style: normal;
     font-size: 25px;
     color: white;
-    /*Quiz questuions pages*/
+}
+/*Quiz details page*/
+.quiz-card {
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .quiz-question {
+.quiz-content {
+    margin: 10px 20px;
+}
+
+#quiz-button {
+    width: min-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    #quiz-button a {
+        font-size: 30px;
+        padding: 9px 35px;
+        border: none;
+        background-color: rgba(105, 216, 122, 1);
+        border-radius: 5px;
+    }
+
+
+/*Quiz questions pages*/
+
+.quiz-question {
     width: 75%;
     margin: 20px auto 20px 0px;
     border-width: 8px;
     border-color: rgb(41, 59, 186);
 }
 
-    .quiz-answers{
-        margin-top: 10px;
-        margin-bottom: 15px;
+.quiz-answers {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
+
 .question-body {
     margin: 10px 30px 0px 30px;
     font-family: Segoe UI;
@@ -4322,6 +4359,7 @@ a.nochange:hover {
     font-size: 20px;
     margin: 10px 0px 20px 30px;
 }
+
 .question-submit-btn {
     position: absolute;
     left: 900px;
