@@ -3872,3 +3872,417 @@ a.nochange:hover {
         background-color: rgba(105, 216, 122, 1);
         border-radius: 5px;
     }
+
+    /*for QUESTION*/
+#u312_div {
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 1001px;
+    height: 605px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(41, 59, 186, 1);
+    border-radius: 15px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u312 {
+    border-width: 0px;
+    position: relative;
+    left: 40px;
+    top: 60px;
+    width: 1000px;
+    height: 605px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u317_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 37px;
+    height: 36px;
+}
+
+#u317 {
+    border-width: 0px;
+    position: relative;
+    left: 820px;
+    top: -520px;
+    width: 37px;
+    height: 36px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u318 {
+    border-width: 0px;
+    position: relative;
+    left: 870px;
+    top: -560px;
+    width: 88px;
+    height: 29px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+}
+
+#u314 {
+    border-width: 0px;
+    position: relative;
+    left: 80px;
+    top: -588px;
+    width: 551px;
+    height: 41px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 31px;
+    color: #293BBA;
+}
+
+#u315_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 286px;
+    height: 160px;
+}
+
+#u315 {
+    border-width: 0px;
+    position: relative;
+    left: 397px;
+    top: -560px;
+    width: 400px;
+    height: 117px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u313 {
+    border-width: 0px;
+    position: relative;
+    left: 148px;
+    top: -490px;
+    width: 808px;
+    height: 54px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+
+#options {
+    position: relative;
+    left: 300px;
+    top: -490px;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+.radio input {
+    display: none;
+}
+
+.radio span {
+    position: relative; 
+    display: inline-block; 
+    width: 20px;
+    height: 20px;
+    background: #F5F5F5; 
+    border-radius: 50%; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.radio input:checked + span {
+    background: #293bba;
+}
+    
+.radio input:checked + span::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        background: #fff;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+}
+
+
+/*FOR ENDING*/
+#u1655_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1050px;
+    height: 70px;
+    background: inherit;
+    background-color: rgba(41, 59, 186, 1);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1656 {
+    border-width: 0px;
+    position: relative;
+    left: 330px;
+    top: -10px;
+    width: 800px;
+    height: 43px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    z-index:1;
+}
+
+#u1655 {
+    border-width: 0px;
+    position: relative;
+    left: 45px;
+    top: 50px;
+    width: 1050px;
+    height: 70px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index:1;
+}
+
+#u1654_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1050px;
+    height: 412px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1654 {
+    border-width: 0px;
+    position: relative;
+    left: 45px;
+    top: 6px;
+    width: 1050px;
+    height: 429px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1759 {
+    border-width: 0px;
+    position: relative;
+    left: 420px;
+    top: -295px;
+    width: 300px;
+    height: 32px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1760 {
+    border-width: 0px;
+    position: relative;
+    left: 445px;
+    top: -330px;
+    width: 300px;
+    height: 28px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#u1761 {
+    border-width: 0px;
+    position: relative;
+    left: 459px;
+    top: -365px;
+    width: 300px;
+    height: 28px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+#u1657_div {    
+    font-style: normal;
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 1050px;
+    height: 136px;
+    background: inherit;
+    background-color: rgba(41, 59, 186, 1);
+    border-radius: 0px;
+    -moz-box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1657 {
+    border-width: 0px;
+    position: relative;
+    left: 45px;
+    top: -235px;
+    width: 1050px;
+    height: 136px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1658 {
+    border-width: 0px;
+    position: relative;
+    left: 370px;
+    top: -330px;
+    width: 500px;
+    height: 44px;
+    display: flex;
+    font-family: 'Segoe UI Полужирный', 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 33px;
+    color: black;
+}
+
+#u1757_div {
+    border-width: 0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 905px;
+    height: 65px;
+    background: inherit;
+    background-color: rgba(41, 59, 186, 1);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1757 {
+    border-width: 0px;
+    position: relative;
+    left: 116px;
+    top: -260px;
+    width: 905px;
+    height: 65px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1690_div {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 859px;
+    height: 550px;
+    background: inherit;
+    background-color: rgba(105, 216, 122, 1);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1690 {
+    border-width: 0px;
+    position: relative;
+    left: 141px;
+    top: -293px;
+    width: 859px;
+    height: 550px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#u1758 {
+    border-width: 0px;
+    position: relative;
+    left: 421px;
+    top: -310px;
+    width: 308px;
+    height: 33px;
+    display: flex;
+    font-family: 'Segoe UI Обычный', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color:white;
+}
