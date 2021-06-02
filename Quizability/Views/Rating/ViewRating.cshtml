@@ -30,16 +30,19 @@
     }
     var orderedUsers = users.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
 }
-<div class="container">
+<div class="container" style="position:relative">
     <div>
         <div id="u7_diff" class="ax_default heading_3">
-            <div id="u7_div_diff" class="">
-                <div id="u7_text" class="text ">
-                    <p><span>Рейтинг гравців сайту</span></p>
+            <div id="u7_div" class="">
+                <div id="u7_div_diff" class="">
+                    <div id="u7_text" class="text ">
+                        <p><span>Рейтинг гравців сайту</span></p>
+                    </div>
                 </div>
             </div>
+            
         </div>
-        <div>
+        <div style="margin-top:30px">
             <table border="3" bgcolor="white" align="center" cellpadding="10px" >
                 <tr>
                     <th style="text-align:center">Місце</th>

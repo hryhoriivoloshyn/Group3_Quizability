@@ -4,13 +4,15 @@
     {
         @if (topic.Quizes.Count != 0)
         {
-            <div id="u7_diff" class="ax_default heading_3">
-                <div id="u7_div_diff" class="">
-                    <div id="u7_text" class="text ">
-                        <p><span>@topic.TopicName</span></p>
-                    </div>
+    <div id="u7_diff" class="ax_default heading_3">
+        <div id="u7_div" class="">
+            <div id="u7_div_diff" class="">
+                <div id="u7_text" class="text ">
+                    <p><span>@topic.TopicName</span></p>
                 </div>
             </div>
+        </div>
+    </div>
             <div class="row">
                 @foreach (var quiz in topic.Quizes)
                 {
