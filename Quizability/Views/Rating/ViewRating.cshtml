@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<UserQuiz>
 @{
     Dictionary<int, double?> users = new Dictionary<int, double?>();
+    int count = 1;
     foreach(var item in Model)
     {
         if(!users.ContainsKey(item.UserId))
@@ -13,15 +14,32 @@
 }
 <div class="container">
     <div>
-        <ol>
-            @foreach (var item in orderedUsers)
-            {
-                int quizes = Model.Where(uq => uq.UserId == item.Key).Distinct().Count(uq => uq.QuizId != 0);
-                UserQuiz userQ = Model.Where(u => u.UserId == item.Key).First();
-            <li>
-                @userQ.User.Name  @quizes @item.Value
-            </li>
-            }
-        </ol>
+        <div id="u7_diff" class="ax_default heading_3">
+            <div id="u7_div_diff" class="">
+                <div id="u7_text" class="text ">
+                    <p><span>Рейтинг гравців сайту</span></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table border="3" bgcolor="white" align="center" cellpadding="10px" >
+                <tr>
+                    <th style="text-align:center">Місце</th>
+                    <th style="text-align:center">Логін</th>
+                    <th style="text-align:center">Кількість пройдених вікторин</th>
+                    <th style="text-align:center">Загальна кількість балів</th>
+                </tr>
+                @foreach (var item in orderedUsers)
+                {
+                    int quizes = Model.Where(uq => uq.UserId == item.Key).Distinct().Count(uq => uq.QuizId != 0);
+                    UserQuiz userQ = Model.Where(u => u.UserId == item.Key).First();
+                    <tr><td style="text-align:center">@count</td>
+                    <td style="text-align:center">@userQ.User.Name</td>
+                    <td style="text-align:center">@quizes</td>
+                    <td style="text-align:center">@item.Value</td></tr>
+                    count++;
+                }
+            </table>
+        </div>
     </div>
 </div>
