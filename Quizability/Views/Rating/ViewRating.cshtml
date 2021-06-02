@@ -2,11 +2,29 @@
 @{
     Dictionary<int, double?> users = new Dictionary<int, double?>();
     int count = 1;
-    foreach(var item in Model)
+    var q = Model.OrderByDescending(qr => qr.Points).ToList();
+    foreach (var item in Model)
     {
         if(!users.ContainsKey(item.UserId))
         {
-            double? sumPoints = Model.Where(uq => uq.UserId == item.UserId).Sum(uq => uq.Points);
+            List<int> quizesL = new List<int>();
+            foreach (var it in q)
+            {
+                if (!quizesL.Contains(it.QuizId))
+                {
+                    List<UserQuiz> check = Model.Where(ch => ch.UserId == item.UserId && ch.QuizId == it.QuizId).ToList();
+                    if(check?.Any()==true)
+                    {
+                        quizesL.Add(it.QuizId);
+                    }
+
+                }
+            }
+            double? sumPoints = 0;
+            foreach(var it in quizesL)
+            {
+                sumPoints += q.Where(uq => uq.UserId == item.UserId && uq.QuizId == it).Select(p => p.Points).First();
+            }
             users.Add(item.UserId, sumPoints);
         }
     }
@@ -31,7 +49,16 @@
                 </tr>
                 @foreach (var item in orderedUsers)
                 {
-                    int quizes = Model.Where(uq => uq.UserId == item.Key).Distinct().Count(uq => uq.QuizId != 0);
+                    List<int> quizesList = new List<int>();
+                    List<UserQuiz> userQuizzes = Model.Where(uq => uq.UserId == item.Key).ToList();
+                    foreach(var it in userQuizzes)
+                    {
+                        if(!quizesList.Contains(it.QuizId))
+                        {
+                            quizesList.Add(it.QuizId);
+                        }
+                    }
+                    int quizes = quizesList.Count();
                     UserQuiz userQ = Model.Where(u => u.UserId == item.Key).First();
                     <tr><td style="text-align:center">@count</td>
                     <td style="text-align:center">@userQ.User.Name</td>
