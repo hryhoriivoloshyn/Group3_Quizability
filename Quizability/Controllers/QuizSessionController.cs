@@ -136,7 +136,22 @@ namespace Quizability.Controllers
                 db.UserAchievements.Add(testAch);
                 db.SaveChanges();
             }
-            return View();
+
+            Quize quiz = db.Quizes.FirstOrDefault(q=>q.QuizId==quizId);
+
+            ViewBag.UserId=user.UserId;
+            ViewBag.QuizId = quizId;
+            ViewBag.QuestionsAmount = db.Questions.Where(q => q.QuizId == quizId).Count();
+
+
+            List<UserQuiz> usersQuizes = db.UserQuizzes.ToList();
+            foreach(var uq in usersQuizes)
+            {
+                uq.Quiz = db.Quizes.FirstOrDefault(q => q.QuizId == uq.QuizId);
+                uq.User = db.Users.FirstOrDefault(u => u.UserId == uq.UserId);
+            }
+            
+            return View(usersQuizes);
         }
 
     }
