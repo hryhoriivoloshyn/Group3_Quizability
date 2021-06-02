@@ -1,78 +1,80 @@
-﻿<!-- Unnamed (Rectangle) -->
+﻿@model List<UserQuiz>
+@{
+    int userId = ViewBag.UserId;
+    int quizId = ViewBag.QuizId;
+    UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
+    TimeSpan usedTime = resultUserQuiz.FinishTime - resultUserQuiz.FinishTime;
+}
+
+
+<!-- Unnamed (Rectangle) -->
 <div id="u1655" class="ax_default box_2">
-	<div id="u1655_div" class=""></div>
+    <div id="u1655_div" class=""></div>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1656" class="ax_default heading_1">
-	<p><span>Вікторина &quot;НАЗВАНИЕ. НАЗВАНИЕ&quot;</span></p>
+    <p><span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1654" class="ax_default box_1">
-	<div id="u1654_div" class=""></div>
+    <div id="u1654_div" class=""></div>
 </div>
 
 
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1761" class="ax_default heading_2">
-	<p><span>Наданий час: XX хв</span></p>
+    <p><span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1760" class="ax_default heading_2">
-	<p><span>Затрачений час: XX хв</span></p>
+    <p><span>Затрачени час: @usedTime хв</span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1759" class="ax_default heading_2">
-	<p><span>Правильні відповіді: XX/XX</span></p>
+    <p><span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span></p>
 </div>
 
 
 
 <!-- head -->
 <div id="u1657" class="ax_default box_2">
-	<div id="u1657_div" class=""></div>
+    <div id="u1657_div" class=""></div>
 </div>
 
 <!-- result in head -->
 <div id="u1658" class="ax_default heading_2">
-	<p><span>Ваш результат:&nbsp; XX балів</span></p>
+    <p><span>Ваш результат: @resultUserQuiz.Points балів</span></p>
 </div>
 
 <!-- second head -->
 <div id="u1757" class="ax_default box_2">
-	<div id="u1757_div" class=""></div>
+    <div id="u1757_div" class=""></div>
 </div>
 
 <!-- text in 2head -->
 <div id="u1758" class="ax_default heading_1">
-	<p><span>Загальний рейтинг гравців</span></p>
+    <p><span>Загальний рейтинг гравців</span></p>
 </div>
 
 <!-- table body -->
 <div id="u1690" class="ax_default box_1">
-	<div id="u1690_div" class=""></div>
+    <div id="u1690_div" class=""></div>
 </div>
 <!--
-@model List<UserQuiz>
-@{
-	int userId = ViewBag.UserId;
-	int quizId = ViewBag.QuizId;
-	UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
-	TimeSpan usedTime = resultUserQuiz.FinishTime - resultUserQuiz.FinishTime;
-}
 
 
 <div class="container">
 
-	<span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span>
-	<span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span>
-	<span>Затрачени час: @usedTime хв</span>
-	<span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span>
-	<span>Ваш результат: @resultUserQuiz.Points балів</span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
 </div>
-	-->
+    -->
