@@ -4,9 +4,44 @@
     int quizId = ViewBag.QuizId;
     UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
     TimeSpan usedTimeSpan = resultUserQuiz.FinishTime - resultUserQuiz.StartTme;
-   string usedTime= string.Format("{0}:{1:00}",
-        (int)usedTimeSpan.TotalMinutes, // <== Note the casting to int.
-        usedTimeSpan.Seconds);
+    string usedTime = string.Format("{0}:{1:00}",
+         (int)usedTimeSpan.TotalMinutes, // <== Note the casting to int.
+         usedTimeSpan.Seconds);
+
+
+
+
+    Dictionary<int, double?> users = new Dictionary<int, double?>();
+    int count = 1;
+    List<UserQuiz> resultModel = ViewBag.Data;
+    var q = resultModel.OrderByDescending(qr => qr.Points).ToList();
+    foreach (var item in resultModel)
+    {
+        if (!users.ContainsKey(item.UserId))
+        {
+            List<int> quizesL = new List<int>();
+            foreach (var it in q)
+            {
+                if (!quizesL.Contains(it.QuizId))
+                {
+                    List<UserQuiz> check = resultModel.Where(ch => ch.UserId == item.UserId && ch.QuizId == it.QuizId).ToList();
+                    if (check?.Any() == true)
+                    {
+                        quizesL.Add(it.QuizId);
+                    }
+
+                }
+            }
+            double? sumPoints = 0;
+            foreach (var it in quizesL)
+            {
+                sumPoints += q.Where(uq => uq.UserId == item.UserId && uq.QuizId == it).Select(p => p.Points).First();
+            }
+            users.Add(item.UserId, sumPoints);
+        }
+    }
+    var orderedUsers = users.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
 }
 
 
@@ -69,3 +104,45 @@
     <div id="u1690_div" class=""></div>
 </div>
 
+<div class="container">
+    <div>
+        <div id="u7_diff" class="ax_default heading_3">
+            <div id="u7_div_diff" class="">
+                <div id="u7_text" class="text ">
+                    <p><span>Рейтинг гравців вікторини</span></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table border="3" bgcolor="white" align="center" cellpadding="10px">
+                <tr>
+                    <th style="text-align:center">Місце</th>
+                    <th style="text-align:center">Логін</th>
+                    <th style="text-align:center">Кількість пройдених вікторин</th>
+                    <th style="text-align:center">Загальна кількість балів</th>
+                </tr>
+                @foreach (var item in orderedUsers)
+                {
+                    List<int> quizesList = new List<int>();
+                    List<UserQuiz> userQuizzes = resultModel.Where(uq => uq.UserId == item.Key).ToList();
+                    foreach (var it in userQuizzes)
+                    {
+                        if (!quizesList.Contains(it.QuizId))
+                        {
+                            quizesList.Add(it.QuizId);
+                        }
+                    }
+                    int quizes = quizesList.Count();
+                    UserQuiz userQ = resultModel.Where(u => u.UserId == item.Key).First();
+                    <tr>
+                        <td style="text-align:center">@count</td>
+                        <td style="text-align:center">@userQ.User.Name</td>
+                        <td style="text-align:center">@quizes</td>
+                        <td style="text-align:center">@item.Value</td>
+                    </tr>
+                    count++;
+                }
+            </table>
+        </div>
+    </div>
+</div>

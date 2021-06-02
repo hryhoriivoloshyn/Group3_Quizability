@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Quizability.Models;
 using Quizability.ViewModels;
 using System;
@@ -153,9 +154,59 @@ namespace Quizability.Controllers
                 uq.Quiz = db.Quizes.FirstOrDefault(q => q.QuizId == uq.QuizId);
                 uq.User = db.Users.FirstOrDefault(u => u.UserId == uq.UserId);
             }
+            ViewBag.Data = ViewRating();
             
             return View(usersQuizes);
         }
+
+        
+            
+            private List<User> GetUserInfo()
+            {
+                List<User> info = new List<User>();
+                List<User> dbInfo =db.Users.ToList();
+                if (dbInfo?.Any() == true)
+                {
+                    foreach (var u in dbInfo)
+                    {
+                        info.Add(new User()
+                        {
+                            UserId = u.UserId,
+                            Name = u.Name,
+                            Email = u.Email,
+                            Password = u.Password,
+                            StatusId = u.StatusId
+                        });
+                    }
+                }
+                return info;
+            }
+            private List<UserQuiz> ViewRating()
+            {
+                List<UserQuiz> ratingData =  db.UserQuizzes.Where(uq => uq.Finished == true).ToList();
+                List<UserQuiz> data = new List<UserQuiz>();
+                List<User> userList = GetUserInfo();
+                if (ratingData?.Any() == true)
+                {
+                    foreach (var uq in ratingData)
+                    {
+                        data.Add(new UserQuiz()
+                        {
+                            UserId = uq.UserId,
+                            QuizId = uq.QuizId,
+                            StartTme = uq.StartTme,
+                            FinishTime = uq.FinishTime,
+                            Points = uq.Points,
+                            RightAnswersAmount = uq.RightAnswersAmount,
+                            Finished = uq.Finished,
+                            User = userList.Where(u => u.UserId == uq.UserId).First()
+                        });
+                    }
+                }
+            return data;
+                
+            }
+        
 
     }
 }
