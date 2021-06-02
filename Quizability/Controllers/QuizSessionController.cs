@@ -35,6 +35,7 @@ namespace Quizability.Controllers
             if (questionId == 0) {
                 
                 TempData["questionId"] = questionsAnswers.Questions.Select(q => q.QuestionId).FirstOrDefault();
+
                 string userEmail = this.User.Identity.Name;
                 User user = db.Users.FirstOrDefault(u=>u.Email== userEmail);
                 
@@ -45,6 +46,7 @@ namespace Quizability.Controllers
 
                 db.UserQuizzes.Add(new UserQuiz { UserId = user.UserId, QuizId = quizId, StartTme = System.DateTime.Now, Points=0, FinishTime = finishTime,RightAnswersAmount=0, Finished=false});
                 db.SaveChanges();
+
                 return View(questionsAnswers.Questions.First());
             }
             
@@ -67,7 +69,7 @@ namespace Quizability.Controllers
             {
                 q.Answers = db.Answers.Where(a => a.QuestionId == q.QuestionId).ToList();
             }
-
+            
             string userEmail = this.User.Identity.Name;
             User user = db.Users.FirstOrDefault(u => u.Email == userEmail);
 
@@ -90,6 +92,7 @@ namespace Quizability.Controllers
             
               int nextQuestionId =questionsAnswers.Questions.SkipWhile(q => q.QuestionId != (int)TempData["questionId"])
                 .Skip(1).Select(q=>q.QuestionId).FirstOrDefault();
+
             if (nextQuestionId != 0)
             {
                 TempData["questionId"] = nextQuestionId;
