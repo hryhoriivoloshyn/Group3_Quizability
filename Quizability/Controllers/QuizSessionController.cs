@@ -23,7 +23,6 @@ namespace Quizability.Controllers
         [HttpGet]
         public IActionResult Session(int quizId,int questionId)
         {
-
             QuestionsAnswersViewModel questionsAnswers = new QuestionsAnswersViewModel { };
             questionsAnswers.Questions = db.Questions.Where(q => q.QuizId == quizId).ToList();
             foreach (Question question in questionsAnswers.Questions)
@@ -38,7 +37,7 @@ namespace Quizability.Controllers
 
                 string userEmail = this.User.Identity.Name;
                 User user = db.Users.FirstOrDefault(u=>u.Email== userEmail);
-                
+
                 TimeSpan? ts = db.Quizes.Where(q => q.QuizId == quizId).Select(q => q.QuizTime).FirstOrDefault();
                 DateTime finishTime = DateTime.Now + (TimeSpan)ts;
                 //Записать финиш тайм тоже в бд
@@ -107,9 +106,8 @@ namespace Quizability.Controllers
                 userSession.FinishTime = System.DateTime.Now;
                 userSession.Finished = true;
                 db.SaveChanges();
-
+                TempData["time"] = userSession.FinishTime;
                 //Реализовать здесь обработку результата пользователя c учетом времени
-
 
                 return RedirectToAction("ShowQuizResults","QuizSession", new {
                 quizId=TempData["quizId"]
@@ -120,6 +118,24 @@ namespace Quizability.Controllers
         [Route("QuizResults/{quizId}")]
         public IActionResult ShowQuizResults(int quizId)
         {
+            DateTime time = (DateTime)TempData["time"];
+            string userEmail = this.User.Identity.Name;
+            User user = db.Users.FirstOrDefault(u => u.Email == userEmail);
+            Achievement forUser = db.Achievements.Where(a => a.QuizId == quizId).First();
+            int check = db.UserAchievements.Where(ua => ua.AchievementId == forUser.AchievementId && ua.UserId == user.UserId).Count();
+            if(check==0)
+            {
+                UserAchievement testAch = new UserAchievement()
+                {
+                    AchievementId = forUser.AchievementId,
+                    UserId = user.UserId,
+                    ObtainingTime = time,
+                    Achievement = forUser,
+                    User = user
+                };
+                db.UserAchievements.Add(testAch);
+                db.SaveChanges();
+            }
             return View();
         }
 
