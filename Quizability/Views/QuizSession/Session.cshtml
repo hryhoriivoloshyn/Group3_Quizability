@@ -1,0 +1,35 @@
+﻿@model Quizability.Models.Question
+
+<div>   Удали меня дата такая:  @TempData["finishTime"]</div>
+<div class="container">
+    <div style="height: 500px; width: 500px">
+        <p id="demo"></p>
+    </div>
+    <div>
+        <img src="@Model.ImageSrc">
+        <span>@Model.QuestionText</span>
+    </div>
+    <form asp-action="Session" asp-controller="QuizSession">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+           @foreach(var answer in Model.Answers){
+            <input type="radio" name="chosenAnswer" value=@answer.AnswerId>
+            <label for="radio1">@answer.AnswerText</label>
+            }
+        </div>
+        <input type="submit" value="Відповісти" class="btn" />
+    </form>
+</div>
+
+
+
+
+@*<script type="text/javascript" src="/js/Timer.js"></script>
+<script>
+    var finishTime = new Date('@{
+            @TempData["finishTime"].ToString("yyyy-MM-dd");
+                }T@{
+            @TempData["finishTime"].ToString("HH:mm:ss");
+            }');
+    setTimer(finishTime);
+</script>*@

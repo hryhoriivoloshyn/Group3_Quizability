@@ -42,8 +42,11 @@ namespace Quizability
                 {
                     options.ClientId = "626183172171-l0mfqkv4967ohh1bmj10he3200b792sv.apps.googleusercontent.com";
                     options.ClientSecret = "YqAHBp-PxXzfDSdkwSou8ADs";
+                   
                 }
                 );
+
+          
 
             services.AddControllersWithViews();
         }
@@ -64,6 +67,8 @@ namespace Quizability
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            
+
             app.UseRouting();
 
             app.UseAuthentication();    // аутентификация
@@ -74,6 +79,9 @@ namespace Quizability
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+               
+                    
             });
         }
     }
