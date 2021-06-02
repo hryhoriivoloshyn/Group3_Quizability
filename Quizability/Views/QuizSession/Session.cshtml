@@ -1,24 +1,41 @@
 ﻿@model Quizability.Models.Question
 
-<div>   Удали меня дата такая:  @TempData["finishTime"]</div>
+@*<div>   Удали меня, дата такая:  @TempData["finishTime"]</div>*@
+
 <div class="container">
-    <div style="height: 500px; width: 500px">
-        <p id="demo"></p>
-    </div>
-    <div>
-        <img src="@Model.ImageSrc">
-        <span>@Model.QuestionText</span>
-    </div>
-    <form asp-action="Session" asp-controller="QuizSession">
-        <div class="validation" asp-validation-summary="ModelOnly"></div>
-        <div>
-           @foreach(var answer in Model.Answers){
-            <input type="radio" name="chosenAnswer" value=@answer.AnswerId>
-            <label for="radio1">@answer.AnswerText</label>
-            }
+    <div class="card quiz-question">
+        
+        <div class="question-body">
+           
+            <form asp-action="Session" asp-controller="QuizSession">
+                <input type="submit" value="Відповісти" class="btn question-submit-btn" />
+                @if (Model.ImageSrc != null)
+                {
+                    <div class="question-img">
+                        <img class="card-img-top" src="@Model.ImageSrc" alt="Image not found">
+                    </div>
+                }
+                <div id="question-text">
+                    <span>@Model.QuestionText</span>
+                </div>
+                <div class="validation" asp-validation-summary="ModelOnly"></div>
+                <div class="quiz-answers">
+                    <ul class="list-group">
+
+                        @foreach (var answer in Model.Answers)
+                        {
+                            <li class="list-group-item align-items-center">
+                                <input type="radio" name="chosenAnswer" value=@answer.AnswerId id="@answer.AnswerId">
+                                <label id="question-answer" for="@answer.AnswerId">@answer.AnswerText</label>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+
+            </form>
         </div>
-        <input type="submit" value="Відповісти" class="btn" />
-    </form>
+    </div>
 </div>
 
 

@@ -1,1 +1,18 @@
-﻿<div>   Хорошая работа Олег!</div>
+﻿@model List<UserQuiz>
+@{
+    int userId = ViewBag.UserId;
+    int quizId = ViewBag.QuizId;
+    UserQuiz resultUserQuiz = Model.LastOrDefault(uq=>(uq.UserId==userId)&&(uq.QuizId==quizId));
+    TimeSpan usedTime = resultUserQuiz.FinishTime - resultUserQuiz.FinishTime;
+ }
+
+
+<div class="container">
+
+    <span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span>
+    <span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span>
+    <span>Затрачени час: @usedTime хв</span>
+    <span>@resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span>
+    <span>Ваш результат: @resultUserQuiz.Points балів</span>
+
+</div>

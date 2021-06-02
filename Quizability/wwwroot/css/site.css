@@ -3872,3 +3872,54 @@ a.nochange:hover {
         background-color: rgba(105, 216, 122, 1);
         border-radius: 5px;
     }
+
+
+    /*Quiz questuions pages*/
+
+.quiz-question {
+    width: 75%;
+    margin: 20px auto 20px 0px;
+    border-width: 8px;
+    border-color: rgb(41, 59, 186);
+}
+
+    .quiz-answers{
+        margin-top: 10px;
+        margin-bottom: 15px;
+}
+.question-body {
+    margin: 10px 30px 0px 30px;
+    font-family: Segoe UI;
+    font-weight: 600;
+}
+
+#question-text {
+    font-size: 20px;
+    margin: 10px 0px 20px 30px;
+}
+.question-submit-btn {
+    position: absolute;
+    left: 900px;
+    top: 200px;
+    width: 200px;
+    height: 70px;
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(105, 216, 122, 1);
+    border-radius: 25px;
+}
+
+.question-img {
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question-answer {
+    width: 95%;
+    height: 100%;
+}
