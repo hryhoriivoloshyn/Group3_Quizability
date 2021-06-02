@@ -1,0 +1,27 @@
+﻿@model IEnumerable<UserQuiz>
+@{
+    Dictionary<int, double?> users = new Dictionary<int, double?>();
+    foreach(var item in Model)
+    {
+        if(!users.ContainsKey(item.UserId))
+        {
+            double? sumPoints = Model.Where(uq => uq.UserId == item.UserId).Sum(uq => uq.Points);
+            users.Add(item.UserId, sumPoints);
+        }
+    }
+    var orderedUsers = users.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+}
+<div class="container">
+    <div>
+        <ol>
+            @foreach (var item in orderedUsers)
+            {
+                int quizes = Model.Where(uq => uq.UserId == item.Key).Distinct().Count(uq => uq.QuizId != 0);
+                UserQuiz userQ = Model.Where(u => u.UserId == item.Key).First();
+            <li>
+                @userQ.User.Name  @quizes @item.Value
+            </li>
+            }
+        </ol>
+    </div>
+</div>
