@@ -331,7 +331,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     width: 304px;
     height: 48px;
     display: flex;
@@ -350,7 +350,7 @@
   width:100%;
 }
 #u7_text {
-    margin-top: 5px;
+    margin-top: 10px;
     border-width: 0px;
     word-wrap: break-word;
     text-transform: none;
