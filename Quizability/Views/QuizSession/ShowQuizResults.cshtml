@@ -20,7 +20,7 @@
 		if (!users.ContainsKey(item.UserId))
 		{
 			int currentQuiz = resultUserQuiz.QuizId;
-			double? sumPoints = q.Where(uq => uq.UserId == item.UserId && uq.QuizId == currentQuiz).Select(p => p.Points).First();
+			double? sumPoints = q.Where(uq => uq.UserId == item.UserId && uq.QuizId == currentQuiz).Select(p => p.Points).FirstOrDefault();
 			users.Add(item.UserId, sumPoints);
 		}
 	}
@@ -86,18 +86,8 @@
 <!-- table body -->
 <div id="u1690" class="ax_default box_1">
 	<div id="u1690_div" class="">
-		<div class="container"style="
-    position: relative;
-        bottom: 820px;
-">
+		<div class="container">
 			<div>
-				<div id="u7_diff" class="ax_default heading_3">
-					<div id="u7_div_diff" class="">
-						<div id="u7_text" class="text ">
-							<p><span>Рейтинг гравців вікторини</span></p>
-						</div>
-					</div>
-				</div>
 				<div>
 					<table border="3" bgcolor="white" width="800px" align="center" cellpadding="10px">
 						<tr>
@@ -106,8 +96,12 @@
 							<th style="text-align:center">Кількість балів</th>
 						</tr>
 						@foreach (var item in orderedUsers)
-						{
-							UserQuiz userQ = resultModel.Where(u => u.UserId == item.Key).First();
+                        {
+                            if (item.Value == null || item.Value <= 0)
+                            {
+								continue;
+                            }
+                            UserQuiz userQ = resultModel.Where(u => u.UserId == item.Key).First();
 							<tr>
 								<td style="text-align:center">@count</td>
 								<td style="text-align:center">@userQ.User.Name</td>
