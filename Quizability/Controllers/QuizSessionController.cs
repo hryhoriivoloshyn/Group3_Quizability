@@ -110,6 +110,7 @@ namespace Quizability.Controllers
                 TempData["time"] = userSession.FinishTime;
                 //Реализовать здесь обработку результата пользователя c учетом времени
 
+
                 return RedirectToAction("ShowQuizResults","QuizSession", new {
                 quizId=TempData["quizId"]
                 });
