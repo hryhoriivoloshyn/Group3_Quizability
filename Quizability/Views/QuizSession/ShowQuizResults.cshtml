@@ -1,126 +1,133 @@
 ﻿@model List<UserQuiz>
 @{
-    int userId = ViewBag.UserId;
-    int quizId = ViewBag.QuizId;
-    UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
-    TimeSpan usedTimeSpan = resultUserQuiz.FinishTime - resultUserQuiz.StartTme;
-    string usedTime = string.Format("{0}:{1:00}",
-         (int)usedTimeSpan.TotalMinutes, // <== Note the casting to int.
-         usedTimeSpan.Seconds);
+	int userId = ViewBag.UserId;
+	int quizId = ViewBag.QuizId;
+	UserQuiz resultUserQuiz = Model.LastOrDefault(uq => (uq.UserId == userId) && (uq.QuizId == quizId));
+	TimeSpan usedTimeSpan = resultUserQuiz.FinishTime - resultUserQuiz.StartTme;
+	string usedTime = string.Format("{0}:{1:00}",
+		 (int)usedTimeSpan.TotalMinutes, // <== Note the casting to int.
+		 usedTimeSpan.Seconds);
 
 
 
 
-    Dictionary<int, double?> users = new Dictionary<int, double?>();
-    int count = 1;
-    List<UserQuiz> resultModel = ViewBag.Data;
-    var q = resultModel.OrderByDescending(qr => qr.Points).ToList();
-    foreach (var item in resultModel)
-    {
-        if (!users.ContainsKey(item.UserId))
-        {
-            int currentQuiz = resultUserQuiz.QuizId;
-            double? sumPoints = q.Where(uq => uq.UserId == item.UserId && uq.QuizId == currentQuiz).Select(p => p.Points).First();
-            users.Add(item.UserId, sumPoints);
-        }
-    }
-    var orderedUsers = users.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+	Dictionary<int, double?> users = new Dictionary<int, double?>();
+	int count = 1;
+	List<UserQuiz> resultModel = ViewBag.Data;
+	var q = resultModel.OrderByDescending(qr => qr.Points).ToList();
+	foreach (var item in resultModel)
+	{
+		if (!users.ContainsKey(item.UserId))
+		{
+			int currentQuiz = resultUserQuiz.QuizId;
+			double? sumPoints = q.Where(uq => uq.UserId == item.UserId && uq.QuizId == currentQuiz).Select(p => p.Points).First();
+			users.Add(item.UserId, sumPoints);
+		}
+	}
+	var orderedUsers = users.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
 
 }
 
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1655" class="ax_default box_2">
-    <div id="u1655_div" class=""></div>
+	<div id="u1655_div" class=""></div>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1656" class="ax_default heading_1">
-    <p><span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span></p>
+	<p><span>Вікторина "@resultUserQuiz.Quiz.QuizName"</span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1654" class="ax_default box_1">
-    <div id="u1654_div" class=""></div>
+	<div id="u1654_div" class=""></div>
 </div>
 
 
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1761" class="ax_default heading_2">
-    <p><span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span></p>
+	<p><span>Наданий час: @resultUserQuiz.Quiz.QuizTime хв </span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1760" class="ax_default heading_2">
-    <p><span>Затрачений час: @usedTime хв</span></p>
+	<p><span>Затрачений час: @usedTime хв</span></p>
 </div>
 
 <!-- Unnamed (Rectangle) -->
 <div id="u1759" class="ax_default heading_2">
-    <p><span>Правильні відповіді: @resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span></p>
+	<p><span>Правильні відповіді: @resultUserQuiz.RightAnswersAmount/@ViewBag.QuestionsAmount</span></p>
 </div>
 
 
 
 <!-- head -->
 <div id="u1657" class="ax_default box_2">
-    <div id="u1657_div" class=""></div>
+	<div id="u1657_div" class=""></div>
 </div>
 
 <!-- result in head -->
 <div id="u1658" class="ax_default heading_2">
-    <p><span>Ваш результат: @resultUserQuiz.Points балів</span></p>
+	<p><span>Ваш результат: @resultUserQuiz.Points балів</span></p>
 </div>
 
 <!-- second head -->
 <div id="u1757" class="ax_default box_2">
-    <div id="u1757_div" class=""></div>
+	<div id="u1757_div" class=""></div>
 </div>
 
 <!-- text in 2head -->
 <div id="u1758" class="ax_default heading_1">
-    <p><span>Загальний рейтинг гравців</span></p>
+	<p><span>Загальний рейтинг гравців</span></p>
 </div>
 
 <!-- table body -->
 <div id="u1690" class="ax_default box_1">
-    <div id="u1690_div" class="">
-        <div class="container">
-            <div>
-                <div id="u7_diff" class="ax_default heading_3">
-                    <div id="u7_div_diff" class="">
-                        <div id="u7_text" class="text ">
-                            <p><span>Рейтинг гравців вікторини</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <table border="3" bgcolor="white" width="800px" align="center" cellpadding="10px">
-                        <tr>
-                            <th style="text-align:center">Місце</th>
-                            <th style="text-align:center">Логін</th>
-                            <th style="text-align:center">Кількість балів</th>
-                        </tr>
-                        @foreach (var item in orderedUsers)
-                        {
-                            UserQuiz userQ = resultModel.Where(u => u.UserId == item.Key).First();
-                            <tr>
-                                <td style="text-align:center">@count</td>
-                                <td style="text-align:center">@userQ.User.Name</td>
-                                <td style="text-align:center">@item.Value</td>
-                            </tr>
-                            count++;
-                            if (count > 11)
-                            {
-                                break;
-                            }
-                        }
-                    </table>
-                </div>
-            </div>
-        </div>
+	<div id="u1690_div" class="">
+		<div class="container">
+			<div>
+				<div id="u7_diff" class="ax_default heading_3">
+					<div id="u7_div_diff" class="">
+						<div id="u7_text" class="text ">
+							<p><span>Рейтинг гравців вікторини</span></p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<table border="3" bgcolor="white" width="800px" align="center" cellpadding="10px">
+						<tr>
+							<th style="text-align:center">Місце</th>
+							<th style="text-align:center">Логін</th>
+							<th style="text-align:center">Кількість балів</th>
+						</tr>
+						@foreach (var item in orderedUsers)
+						{
+							UserQuiz userQ = resultModel.Where(u => u.UserId == item.Key).First();
+							<tr>
+								<td style="text-align:center">@count</td>
+								<td style="text-align:center">@userQ.User.Name</td>
+								<td style="text-align:center">@item.Value</td>
+							</tr>
+							count++;
+							if (count > 11)
+							{
+								break;
+							}
+						}
+					</table>
+				</div>
+			</div>
+		</div>
 
-    </div>
+	</div>
 </div>
 
+<!-- Unnamed (Rectangle) -->
+<div id="u6a" class="ax_default primary_button">
+	<div id="u6a_div" class=""></div>
+	<div id="u6a_text" class="text ">
+		<p><span><a href="/QuizesCatalogue/GetAllQuizes">На головну!</a></span></p>
+	</div>
+</div>
