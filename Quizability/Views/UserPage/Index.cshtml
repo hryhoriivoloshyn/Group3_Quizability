@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<UserAchievement>
 @{ 
-    User user = Model.Select(m => m.User).FirstOrDefault();
+    ViewData["Title"] = "UserPage";
+    User user = ViewBag.User;
 }
 <div>
     <div id="u1056" class="ax_default box_1">

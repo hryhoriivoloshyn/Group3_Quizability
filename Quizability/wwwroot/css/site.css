@@ -4325,6 +4325,7 @@ a.nochange:hover {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
     #quiz-button a {

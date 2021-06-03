@@ -44,6 +44,10 @@ namespace Quizability.Controllers
 
         public async Task<ViewResult> Index()
         {
+            string userEmail = this.User.Identity.Name;
+            User threadUser = db.Users.Where(u => u.Email == userEmail).First();
+
+            ViewBag.User = threadUser;
             var data = await GetAllAchivements();
             return View(data);
         }
