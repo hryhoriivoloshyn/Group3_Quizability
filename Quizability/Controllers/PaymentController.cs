@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Quizability.Models;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Quizability.Controllers
 {
+    [Authorize]
     public class PaymentController : Controller
     {
         private readonly ILogger<HomeController> _logger;
